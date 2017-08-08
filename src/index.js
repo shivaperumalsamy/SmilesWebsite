@@ -7,4 +7,4 @@ import  './css/styles.css';
 //import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(<App />, document.getElementById('wrapper'));
-//registerServiceWorker();
+registerServiceWorker();

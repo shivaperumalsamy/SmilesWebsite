@@ -1,6 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Satisfy");
+/*Theme colors*/
+/*Font properties*/
+/* Menubar properties */
+/* Default properties */
 * {
   margin: 0;
   padding: 0;
+  color: white;
   box-sizing: border-box; }
+
+/* Mixin  - margin
+   Params - $top, $right, $bottom, $left   
+*/
+/* Mixin  - position
+   Params - $top, $bottom, $right, $left   
+*/
+/* Mixin  - layoutSize
+   Params - $width, $height  
+*/
+/*
+  Mixin - border-radius
+  Params - $radius 
+*/
+/*
+  Mixin - border-radii
+  Params - $topleft, $topright, $bottomright, $bottomleft 
+*/
+/*
+   Class - setWidthHeightProperties
+*/
+.boxSizeProperties, html, body, #wrapper {
+  width: 100%;
+  height: 100%; }
+
+/*--- START : Document Styles ---*/
+/*--- END : Document Styles ---*/
+/*--- START : Wrapper Styles ---*/
+#wrapper {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.png");
+  background-size: cover;
+  background-attachment: fixed; }
+  #wrapper .menuBar {
+    width: 10%;
+    position: fixed;
+    top: 0;
+    left: "";
+    right: 0;
+    bottom: "";
+    z-index: 2;
+    margin-top: 5%;
+    margin-right: 3%; }
+    #wrapper .menuBar .menuBar__menuIcon {
+      width: 100px;
+      height: 100px;
+      background-color: salmon;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      margin-top: "";
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: ""; }
+    #wrapper .menuBar > .menuBar__menuIcon:not(:first-child) {
+      margin-top: 20px; }
+
+/*--- END : Wrapper Styles ---*/
 
 /*# sourceMappingURL=styles.css.map */

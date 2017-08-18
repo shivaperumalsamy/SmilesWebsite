@@ -1,0 +1,38 @@
+@import '_variable';
+@import '_mixin';
+
+/*--- START : Home Wrapper Styles ---*/
+.wrapper__homeWrapper{
+    
+    @include boxSize(80%); 
+    position: absolute; 
+    @include margin(5%, '', '', 5%);
+
+    //ContentWrapper Styles
+    .homeWrapper__ContentWrapper{
+
+        @include margin(100px);
+        font-family : $font-family;
+        padding-left : 20%;
+        
+        .contentHeader{
+              font-size : $fontsize-L;
+        }
+        
+        .content{
+            @include margin(25px); 
+            font-size : $fontsize-S;
+            
+        }
+        
+        .detailsView{
+         @include margin(20px);
+         font-size : $fontsize-S;
+        }
+
+    }
+}
+/*--- END : Home Wrapper Styles ---*/
+
+
+

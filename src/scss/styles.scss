@@ -1,0 +1,40 @@
+@import '_variable';
+@import '_mixin';
+
+/*--- START : Document Styles ---*/
+html, body {
+  @extend.boxSizeProperties;
+}
+/*--- END : Document Styles ---*/
+
+
+/*--- START : Wrapper Styles ---*/
+#wrapper{
+  @extend.boxSizeProperties;
+  background-image : linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../img/bg.png');
+  background-size : cover;
+  background-attachment : fixed;
+  
+  //Menubar styles
+  .menuBar{
+    @include boxSize(10%); 
+		@include position(fixed,0, '', 0, '');
+		z-index : 2;
+		@include margin(5%, 3%);
+    
+		.menuBar__menuIcon{
+			width : $menuBar-width;
+			height : $menuItem-height;
+			background-color : $menu-color;
+      @include border-radius(50%);
+			@include margin('', auto, '', auto);
+			
+    }
+
+    & > .menuBar__menuIcon:not(:first-child){
+      @include margin(20px);
+    } 
+  }
+
+}
+/*--- END : Wrapper Styles ---*/

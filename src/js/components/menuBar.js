@@ -11,6 +11,10 @@ import commonObj from '../common/data.js';
 
 class MenuBar extends Component{
 
+		/*
+			function Name : renderMenu
+			return : array of components
+		*/
 	renderMenu = () => {
 		let menuItems = commonObj['menuItems'].map((menu, index)=>{			
 			return <MenuIcon icon = {menu.icon} value = {menu.name} key = {index}/>	

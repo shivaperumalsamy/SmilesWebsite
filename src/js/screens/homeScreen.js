@@ -17,7 +17,9 @@ class HomeScreen extends Component {
           mainContent : null
         } 
       }  
-  /* Service call to fetch the content */
+  /* 
+      Service call to fetch the content 
+  */
   componentWillMount = () => {
     this.setState ({
       contentObj : {
@@ -26,7 +28,7 @@ class HomeScreen extends Component {
       }
     });
    } 
-   
+
   render() {
     return ( 
     <div>	

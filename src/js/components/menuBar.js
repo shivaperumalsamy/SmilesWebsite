@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MenuIcon from './menuItem';
+import commonObj from '../common/data.js';
 
 {
   /*
@@ -10,19 +11,20 @@ import MenuIcon from './menuItem';
 
 class MenuBar extends Component{
 
-    renderMenu(index, iconName){
-    	return(
-           <MenuIcon icon = {iconName} value = {iconName}/>
-    	);
+	renderMenu = () => {
+		let menuItems = commonObj['menuItems'].map((menu, index)=>{			
+			return <MenuIcon icon = {menu.icon} value = {menu.name} key = {index}/>	
+		  });
+		
+		  return menuItems;
+	
     } 
 	render(){
+		
+		 
 		return(
 			<div className = "menuBar">
-  				{this.renderMenu(0, "Home")}
-  				{this.renderMenu(1, "About")}
-  				{this.renderMenu(2, "Timeline")}
-  				{this.renderMenu(4, "Gallary")}
-  				{this.renderMenu(5, "Contact us")}
+				{this.renderMenu()}
 			</div>
 		);
 	}

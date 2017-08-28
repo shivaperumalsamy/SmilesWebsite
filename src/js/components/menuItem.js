@@ -10,7 +10,7 @@ class MenuIcon extends Component{
 
 	render(){
 		return(
-         <div className = "menuBar__menuIcon"></div> 
+         <div className = "menuBar__menuIcon">{this.props.value}</div> 
 		);
 	}
 }

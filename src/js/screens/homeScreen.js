@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../css/homeScreen.css';
 import  MenuBar from '../components/menuBar';
 import ContentBar from '../components/contentBar';
-var NextIcon = require ('../../img/timeline-icon.svg')
+
 {
   /*
      Class Name: HomeScreen

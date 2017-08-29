@@ -11,7 +11,7 @@
     //ContentWrapper Styles
     .homeWrapper__ContentWrapper{
 
-        @include margin(100px);
+        @include margin(100px); 
         font-family : $font-family;
         padding-left : 20%;
         
@@ -31,6 +31,9 @@
         }
 
     }
+}
+.height-100vh{
+    height: 100vh;
 }
 /*--- END : Home Wrapper Styles ---*/
 

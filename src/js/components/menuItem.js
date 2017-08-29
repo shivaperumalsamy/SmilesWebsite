@@ -9,8 +9,9 @@ import React, { Component } from 'react';
 class MenuIcon extends Component{
 
 	render(){
+    const sectionid="#"+this.props.sectionId;
 		return(
-         <div className = "menuBar__menuIcon"></div> 
+      <a href={sectionid}><div className = "menuBar__menuIcon"/></a> 
 		);
 	}
 }

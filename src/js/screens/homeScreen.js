@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../../css/homeScreen.css';
 import  MenuBar from '../components/menuBar';
 import ContentBar from '../components/contentBar';
+import commonObj from '../common/data.js';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 {
   /*
@@ -33,7 +35,28 @@ class HomeScreen extends Component {
     return ( 
     <div>	
        <MenuBar/>
+       <ScrollableAnchor id={commonObj.sectionIds[0]}>
+       <div className="height-100vh">
        <ContentBar  contentObj={this.state.contentObj}/> 
+       </div>
+       </ScrollableAnchor>
+       <ScrollableAnchor id={commonObj.sectionIds[1]}>
+       <div className="height-100vh">
+      </div>
+      </ScrollableAnchor>
+      <ScrollableAnchor id={commonObj.sectionIds[2]}>
+      <div className="height-100vh">
+      </div>
+      </ScrollableAnchor>
+      <ScrollableAnchor id={commonObj.sectionIds[3]}>
+      <div className="height-100vh">
+      </div> 
+      </ScrollableAnchor>
+      <ScrollableAnchor id={commonObj.sectionIds[4]}>
+      <div className="height-100vh">
+      </div>
+      </ScrollableAnchor>
+       
     </div> 
     );
   }

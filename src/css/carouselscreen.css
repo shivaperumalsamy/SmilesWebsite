@@ -1,0 +1,41 @@
+.carouselViewpane {
+  height: 100vh;
+  display: flex;
+  position: relative; }
+
+.navL {
+  left: 0; }
+
+.navR {
+  right: 0; }
+
+.navButton {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 35px;
+  cursor: pointer;
+  background-color: #F2D2D2;
+  padding: 0;
+  outline: none;
+  opacity: .1;
+  transition: opacity .4s ease-in-out;
+  z-index: 3; }
+  .navButton:hover {
+    opacity: 0.4; }
+
+.slider-enter {
+  opacity: 0.5; }
+
+.slider-enter.slider-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in; }
+
+.slider-leave {
+  opacity: 1; }
+
+.slider-leave.slider-leave-active {
+  opacity: 0.5;
+  transition: opacity 1000ms ease-in; }
+
+/*# sourceMappingURL=carouselscreen.css.map */

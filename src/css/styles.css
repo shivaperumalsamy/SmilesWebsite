@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css?family=Satisfy");
 @font-face {
   font-family: 'Linearicons-Free';
-  src: url("../img/fonts/Linearicons-Free.eot?w118d");
-  src: url("../img/fonts/Linearicons-Free.eot?#iefixw118d") format("embedded-opentype"), url("../img/fonts/Linearicons-Free.woff2?w118d") format("woff2"), url("../img/fonts/Linearicons-Free.woff?w118d") format("woff"), url("../img/fonts/Linearicons-Free.ttf?w118d") format("truetype"), url("../img/fonts/Linearicons-Free.svg?w118d#Linearicons-Free") format("svg");
+  src: url("../assets/fonts/Linearicons-Free.eot?w118d");
+  src: url("../assets/fonts/Linearicons-Free.eot?#iefixw118d") format("embedded-opentype"), url("../assets/fonts/Linearicons-Free.woff2?w118d") format("woff2"), url("../assets/fonts/Linearicons-Free.woff?w118d") format("woff"), url("../assets/fonts/Linearicons-Free.ttf?w118d") format("truetype"), url("../assets/fonts/Linearicons-Free.svg?w118d#Linearicons-Free") format("svg");
   font-weight: normal;
   font-style: normal; }
 /*Theme colors*/
@@ -45,7 +45,7 @@
 /*--- END : Document Styles ---*/
 /*--- START : Wrapper Styles ---*/
 .height-100vh {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/bg.png");
   background-size: cover;
   background-attachment: fixed; }
 

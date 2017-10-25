@@ -4,6 +4,7 @@ import  MenuBar from '../components/menuBar';
 import ContentBar from '../components/contentBar';
 import commonObj from '../common/data.js';
 import ScrollableAnchor from 'react-scrollable-anchor';
+import Carousel from './CarouselScreen';
 
 {
   /*
@@ -36,13 +37,13 @@ class HomeScreen extends Component {
     <div>	
        <MenuBar/>
        <ScrollableAnchor id={commonObj.sectionIds[0]}>
-       <div className="height-100vh">
-       <ContentBar  contentObj={this.state.contentObj}/> 
-       </div>
+       <Carousel active="1" className="height-100vh">
+      </Carousel>
        </ScrollableAnchor>
        <ScrollableAnchor id={commonObj.sectionIds[1]}>
-       <div className="height-100vh">
-      </div>
+      <div className="height-100vh">
+       <ContentBar  contentObj={this.state.contentObj}/> 
+       </div>
       </ScrollableAnchor>
       <ScrollableAnchor id={commonObj.sectionIds[2]}>
       <div className="height-100vh">

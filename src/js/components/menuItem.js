@@ -11,7 +11,7 @@ class MenuIcon extends Component{
 	render(){
     const sectionid="#"+this.props.sectionId;
 		return(
-      <a href={sectionid}><div className = "menuBar__menuIcon"/></a> 
+      <div className = "menuBar__menuIcon"><a href={sectionid}></a></div>
 		);
 	}
 }

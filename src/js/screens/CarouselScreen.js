@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { CSSTransitionGroup } from 'react-transition-group'
 
 import Slide from '../components/Slider.js';
@@ -16,6 +17,7 @@ class Carousel extends Component{
         }
         this.leftClick = this.moveLeft.bind(this)
         this.rightClick = this.moveRight.bind(this)
+        this.moveToSlide = this.moveToSlide.bind(this)
       }
     componentDidMount() {
         this.timer = setInterval(this.rightClick, 5000);
@@ -26,6 +28,7 @@ class Carousel extends Component{
         clearInterval(this.timer);
         window.removeEventListener('keydown', this.onKeydown);
     }
+
     //fucntion to handle < and > keys
     onKeydown = (e) => {
         const { keyCode } = e;
@@ -45,7 +48,6 @@ class Carousel extends Component{
     //Function to silde left
     moveLeft() {
         clearInterval(this.timer)
-        console.log("move left")
         let newActive = this.state.active
         newActive--
         this.setState({
@@ -56,27 +58,68 @@ class Carousel extends Component{
     //Function to silde right
     moveRight() {
         clearInterval(this.timer)
-        console.log("move right")
         let newActive = this.state.active
         this.setState({
             active: (newActive + 1) % data.length
         })
         this.timer = setInterval(this.rightClick, 5000);
     }
+
+    removePreviousLegendClick = () => {
+        var clickedSlide = document.getElementsByClassName("circle");
+        for(let i=0;i<clickedSlide.length;i++){
+            clickedSlide[i].parentNode.removeChild(clickedSlide[i]);
+        }
+    }
+
+
+    /**
+     * On clicking legend button, the corresponding carousel image has to be shown.
+     * Handling the legend buton click event
+     * @param {*} index 
+     */
+    moveToSlide(index) {
+        clearInterval(this.timer)
+        let newActive = index
+        this.setState({
+            active: (newActive + 1) % data.length
+        })
+        this.removePreviousLegendClick();
+        for(let i=0;i<data.length;i++){
+            if(i==index){
+                var htmlCircleSpan=React.createElement('span',{className:"circle"},'');
+                ReactDOM.render(htmlCircleSpan,document.getElementById("legend_"+index));
+            }
+        }
+        this.timer = setInterval(this.rightClick, 5000);
+    }
+
+    
+    renderLegendButtons = () =>{
+        let legendbtns = data.map((data,index)=>{
+          return  <li className="legend-button" id={'legend_'+index} key={index} data-carousel-active={index} onClick={this.moveToSlide.bind(this,index)}></li>
+        })
+        return legendbtns;
+    }
     
     render() {
-        console.log("Carousel.js render")
 
         return(
             <div className="carouselViewpane">
-                <button className="navButton navL" onClick={this.leftClick}><i className="fi-arrow-left"></i></button>
-                <CSSTransitionGroup 
+                {/* <CSSTransitionGroup 
                     transitionName='slider'
                     transitionEnterTimeout={500}
                     transitionLeaveTimeout={500}>
                     {this.renderSlide()}
+                </CSSTransitionGroup> */}
+                <CSSTransitionGroup transitionName='slider'
+                transitionEnterTimeout={5}
+                    transitionLeaveTimeout={-1}>
+                    {this.renderSlide()}
                 </CSSTransitionGroup>
-                <button className="navButton navR" onClick={this.rightClick}><i className="fi-arrow-right"></i></button>
+                <ul className = "legend-buttons-wrapper">
+                    {this.renderLegendButtons()}
+                </ul>
             </div>
         )
     }

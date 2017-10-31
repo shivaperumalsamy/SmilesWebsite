@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 @font-face {
 	font-family: 'Linearicons-Free';
 	src:url('../assets/fonts/Linearicons-Free.eot?w118d');
@@ -10,19 +11,26 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: FOO;
+	src: url('../assets/fonts/FOO.ttf') format('truetype');
+}
 
-/*Theme colors*/
+/* Fonts */
+$font-family : 'Satisfy', cursive;
+$pacifico-font-family : 'Pacifico', cursive;
+$foo-font-family : FOO;
 
+/* Theme colors */
 $theme-dark : black;
 $theme-light : white;
 $theme-color-1 : salmon;
+$about-shadow : #21201c;
 
-/*Font properties*/
-
-$font-family : 'Satisfy', cursive;
+/* Font properties */
 $fontsize-L : 50px;
 $fontsize-M : 30px;
-$fontsize-S : 20px;
+$fontsize-S : 15px;
 
 /* Menubar properties */
 

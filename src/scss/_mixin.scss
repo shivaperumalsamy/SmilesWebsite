@@ -16,6 +16,16 @@
 	margin-bottom : $bottom; 
 }
 
+/* Mixin  - padding
+   Params - $top, $right, $bottom, $left   
+*/
+@mixin padding($top: null, $right: null, $bottom: null, $left: null){
+	padding-top : $top;
+	padding-right : $right;
+	padding-left : $left;
+	padding-bottom : $bottom; 
+}
+
 /* Mixin  - position
    Params - $top, $bottom, $right, $left   
 */

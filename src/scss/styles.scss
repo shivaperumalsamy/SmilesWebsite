@@ -11,9 +11,9 @@ html, body {
 /*--- START : Wrapper Styles ---*/
  .height-100vh{
   //@extend.boxSizeProperties;
-  //background-image : linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../assets/img/bg.png');
-  //background-size : cover;
-  //background-attachment : fixed;
+  background-image : linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../assets/img/bg.png');
+  background-size : cover;
+  background-attachment : fixed;
 
 }
   //Menubar styles

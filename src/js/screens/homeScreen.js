@@ -5,6 +5,7 @@ import ContentBar from '../components/contentBar';
 import commonObj from '../common/data.js';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Carousel from './CarouselScreen';
+import AboutScreen from './AboutScreen';
 
 {
   /*
@@ -51,6 +52,7 @@ class HomeScreen extends Component {
       </ScrollableAnchor>
       <ScrollableAnchor id={commonObj.sectionIds[3]}>
       <div className="height-100vh">
+        <AboutScreen/>
       </div> 
       </ScrollableAnchor>
       <ScrollableAnchor id={commonObj.sectionIds[4]}>

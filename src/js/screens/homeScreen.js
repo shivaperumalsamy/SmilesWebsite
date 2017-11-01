@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../css/homeScreen.css';
 import  MenuBar from '../components/menuBar';
 import ContentBar from '../components/contentBar';
+import  GalleryComponent from '../components/GalleryComponent';
 import commonObj from '../common/data.js';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Carousel from './CarouselScreen';
@@ -43,7 +44,7 @@ class HomeScreen extends Component {
        </ScrollableAnchor>
        <ScrollableAnchor id={commonObj.sectionIds[1]}>
       <div className="height-100vh">
-       <ContentBar  contentObj={this.state.contentObj}/> 
+        <AboutScreen/>
        </div>
       </ScrollableAnchor>
       <ScrollableAnchor id={commonObj.sectionIds[2]}>
@@ -52,7 +53,7 @@ class HomeScreen extends Component {
       </ScrollableAnchor>
       <ScrollableAnchor id={commonObj.sectionIds[3]}>
       <div className="height-100vh">
-        <AboutScreen/>
+        <GalleryComponent/>
       </div> 
       </ScrollableAnchor>
       <ScrollableAnchor id={commonObj.sectionIds[4]}>

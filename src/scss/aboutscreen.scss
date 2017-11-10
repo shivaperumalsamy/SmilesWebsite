@@ -7,6 +7,7 @@
     @include boxSize(80%,60%); 
     position: absolute; 
     @include margin(10%, '', '', 10%);
+    min-width: 600px;
     //border: 2px solid white ;
 
     .about_area{
@@ -19,8 +20,8 @@
             font-family : $foo-font-family;
             font-size: $fontsize-M;
             @include boxSize(100%,19%); 
-            color: #E5B93C;
-            border-bottom: 2px solid #E5B93C;
+            color: unquote("#"+nth($menuColors , 2 ));
+            border-bottom: 2px solid unquote("#"+nth($menuColors , 2 ));
         }
 
         .content{

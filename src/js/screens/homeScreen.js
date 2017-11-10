@@ -5,6 +5,8 @@ import ContentBar from '../components/contentBar';
 import commonObj from '../common/data.js';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Carousel from './CarouselScreen';
+import AboutScreen from './AboutScreen';
+import TimelineScreen from './TimelineScreen';
 
 {
   /*
@@ -31,31 +33,33 @@ class HomeScreen extends Component {
       }
     });
    } 
-
+// content bar from section 1 is removed, it is ain't supposed to be there. i.e is about screen   
+//<ContentBar  contentObj={this.state.contentObj}/>
   render() {
-    return ( 
+    return (  
     <div>	
-       <MenuBar/>
-       <ScrollableAnchor id={commonObj.sectionIds[0]}>
-       <Carousel active="1" className="height-100vh">
-      </Carousel>
-       </ScrollableAnchor>
-       <ScrollableAnchor id={commonObj.sectionIds[1]}>
-      <div className="height-100vh">
-       <ContentBar  contentObj={this.state.contentObj}/> 
-       </div>
+      <MenuBar/>
+      <ScrollableAnchor id={commonObj.sectionIds[0]}>
+        <Carousel active="1" className="height-100vh">
+        </Carousel>
+      </ScrollableAnchor>
+      <ScrollableAnchor id={commonObj.sectionIds[1]}>
+        <div className="height-100vh" id="section2">
+          <AboutScreen />
+        </div>
       </ScrollableAnchor>
       <ScrollableAnchor id={commonObj.sectionIds[2]}>
-      <div className="height-100vh">
-      </div>
+        <div className="height-100vh">
+          <TimelineScreen />
+        </div>
       </ScrollableAnchor>
       <ScrollableAnchor id={commonObj.sectionIds[3]}>
-      <div className="height-100vh">
-      </div> 
+        <div className="height-100vh">
+        </div> 
       </ScrollableAnchor>
       <ScrollableAnchor id={commonObj.sectionIds[4]}>
-      <div className="height-100vh">
-      </div>
+        <div className="height-100vh">
+        </div>
       </ScrollableAnchor>
        
     </div> 

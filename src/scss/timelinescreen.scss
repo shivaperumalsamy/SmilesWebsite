@@ -1,0 +1,46 @@
+@import '_variable';
+@import '_mixin';
+
+/* Start timeline wrapper styles */
+.wrapper-timelinewrapper{
+    @include boxSize(100%,100%); 
+    min-width: 600px;
+    //border: 2px solid yellow;
+
+    .timeline-header{
+        @include boxSize(85%,$timeline-header-height); 
+        @include margin('','','',$timeline-screen-margin);
+        position: relative;
+        border-bottom: 2px solid unquote("#"+nth($menuColors , 3 ));
+        .timeline-heading{
+            position: absolute;
+            top: 50%;
+            font-family: $foo-font-family;
+            font-size: $fontsize-M;
+            color: unquote("#"+nth($menuColors , 3 ));
+        }
+    } 
+    .timeline-viewpane{
+        @include boxSize(100%,$timeline-body-height) ;
+        width: 92%;
+        //border: 2px solid yellowgreen;
+        .timeline-line{
+            position: relative;
+            top:35%;
+            img{
+                width: 100%
+            }
+        }
+    }
+}
+
+/*        .timeline-component-wrapper{
+            position: relative;
+            @include boxSize(92%,100%);
+            border: 2px solid rebeccapurple;
+            .timeline-line{
+                position: absolute;
+                top: 40%;
+                .timeline-line-svg{
+                    @include boxSize(100%);
+                }*/

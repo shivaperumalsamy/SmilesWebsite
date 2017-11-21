@@ -7,10 +7,8 @@ import commonObj from '../common/data.js';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Carousel from './CarouselScreen';
 import AboutScreen from './AboutScreen';
-<<<<<<< HEAD
 import TimelineScreen from './TimelineScreen';
-=======
->>>>>>> 8d0b1568dd285124d51204133392f9cce5d9e281
+
 
 {
   /*
@@ -42,42 +40,25 @@ class HomeScreen extends Component {
   render() {
     return (  
     <div>	
-<<<<<<< HEAD
-      <MenuBar/>
-      <ScrollableAnchor id={commonObj.sectionIds[0]}>
-        <Carousel active="1" className="height-100vh">
-        </Carousel>
-      </ScrollableAnchor>
-      <ScrollableAnchor id={commonObj.sectionIds[1]}>
-        <div className="height-100vh" id="section2">
-          <AboutScreen />
-        </div>
-=======
        <MenuBar/>
        <ScrollableAnchor id={commonObj.sectionIds[0]}>
-       <Carousel active="1" className="height-100vh">
-      </Carousel>
+          <Carousel active="1" className="height-100vh">
+          </Carousel>
        </ScrollableAnchor>
        <ScrollableAnchor id={commonObj.sectionIds[1]}>
-      <div className="height-100vh">
-        <AboutScreen/>
-       </div>
->>>>>>> 8d0b1568dd285124d51204133392f9cce5d9e281
+          <div className="height-100vh">
+            <AboutScreen/>
+          </div>
       </ScrollableAnchor>
-      <ScrollableAnchor id={commonObj.sectionIds[2]}>
-        <div className="height-100vh">
-          <TimelineScreen />
-        </div>
-      </ScrollableAnchor>
+        <ScrollableAnchor id={commonObj.sectionIds[2]}>
+          <div className="height-100vh">
+            <TimelineScreen />
+          </div>
+        </ScrollableAnchor>
       <ScrollableAnchor id={commonObj.sectionIds[3]}>
-<<<<<<< HEAD
         <div className="height-100vh">
-        </div> 
-=======
-      <div className="height-100vh">
         <GalleryComponent/>
       </div> 
->>>>>>> 8d0b1568dd285124d51204133392f9cce5d9e281
       </ScrollableAnchor>
       <ScrollableAnchor id={commonObj.sectionIds[4]}>
         <div className="height-100vh">

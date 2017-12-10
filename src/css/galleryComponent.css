@@ -41,4 +41,7 @@ a {
 #gallery-carousel li:nth-child(n) {
   background: MistyRose; }
 
+.gallery-wrapper {
+  margin-top: 100px; }
+
 /*# sourceMappingURL=galleryComponent.css.map */

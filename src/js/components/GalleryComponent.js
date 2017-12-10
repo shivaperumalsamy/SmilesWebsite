@@ -23,7 +23,7 @@ class GalleryComponent extends Component{
                     </ul>
                 </div>
             </section>
-            <div class="popup-details"></div>
+            <div className="popup-details"></div>
           </div>
 	   );
 	}

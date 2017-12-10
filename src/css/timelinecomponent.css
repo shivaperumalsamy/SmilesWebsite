@@ -60,14 +60,16 @@
   margin-bottom: "";
   position: relative;
   top: 34%;
-  background-color: #333333;
-  transition: top 2s,border 0.5s;
+  background-color: transparent;
+  border-color: #d76841;
+  transition: border 0.5s,top 1s,display 0.5s;
   transition-timing-function: ease-out; }
   .timeline-component:nth-child(2) {
-    margin-left: 7%; }
+    margin-left: 5%; }
   .timeline-component:hover {
     top: 20%;
-    border: 1px dashed #d76841; }
+    border: 1px dashed #d76841;
+    background-color: #333333; }
   .timeline-component:hover .timeline-content {
     display: block; }
   .timeline-component .timeline-date {

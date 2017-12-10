@@ -48,7 +48,8 @@ var scrollFunctionalityObject = function(){
         
         var parentElement = document.getElementsByClassName('timeline-viewpane')[0];
 
-        parentElement.appendChild(fragment);      
+        parentElement.appendChild(fragment);  
+          
     }
     var slidePrevious = function(flag,data){
         flag = flag-1;

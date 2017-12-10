@@ -11,17 +11,17 @@ $timeline-component-box-width : 250px;
     @include margin('',2%,'','');
     position: relative;
     top: 34%;
-    background-color: #333333;
-    transition: top 2s,border 0.5s;
+    background-color: transparent;
+    border-color: unquote("#"+nth($menuColors , 3 ));
+    transition: border 0.5s,top 1s,display 0.5s;
     transition-timing-function: ease-out;
-    //box-shadow:  0px 4px 0 rgba(0, 0, 0, 0.2), 0 0 40px 0 rgba(0, 0, 0, 0.2);    
-    //border: 1px dashed unquote("#"+nth($menuColors , 3 ));
     &:nth-child(2){
-        margin-left: 7%;
+        margin-left: 5%;
     }
     &:hover{
         top: 20%;
         border: 1px dashed unquote("#"+nth($menuColors , 3 ));
+        background-color: #333333;
     }
     &:hover .timeline-content{
         display: block;
@@ -38,7 +38,6 @@ $timeline-component-box-width : 250px;
         position: absolute;
         top: -75px;
         right: 50px;
-        //background-color: unquote("#"+nth($menuColors , 3 ));
         box-shadow:  0px 4px 0 rgba(0, 0, 0, 0.2), 0 0 40px 0 rgba(0, 0, 0, 0.2);
     }
     .timeline-content{
@@ -51,7 +50,6 @@ $timeline-component-box-width : 250px;
         padding-left: 25px;
         padding-right: 25px;
         @include boxSize(100%,240px); 
-        //border: 2px solid goldenrod;
         @include padding();
         color: rgb(240, 240, 240);
         display: none;

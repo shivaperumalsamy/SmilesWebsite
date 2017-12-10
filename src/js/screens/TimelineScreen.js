@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import throttle from 'lodash.throttle';
 import TimelineComponent from '../components/TimelineComponent.js';
 import '../../css/timelinescreen.css';
 import data from '../../data/timelineScreenData.json';
@@ -10,20 +11,35 @@ import timelineline from '../../assets/img/timelineline.svg';
     Return : @component
 */
 
-/*
-                    <div className = "timeline-component-wrapper">
-                        <div className = "timeline-line"><img src={timelineline} className="timeline-line-svg" alt="logo" /></div>
-                        {this.renderTimelineComponents()}
-                    </div> */
-
 class TimelineScreen extends Component{
 
     constructor(props){
         super(props);
+        this.onResize = this.onResize.bind(this);
+        this.throttleResize = throttle(this.onResize,400);
         this.state = {
-            noOfElements : 4,
+            noOfElements : this.calculateNoOfElements(),
             flag : 1
         }
+    }
+    componentDidMount() {
+        window.addEventListener('resize', this.throttleResize);
+   }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.throttleResize);
+    }
+    onResize() {
+        this.setState({
+            noOfElements : this.calculateNoOfElements()
+        })
+    }
+    calculateNoOfElements() {
+        let width = window.innerWidth;
+        console.log("width = "+ width);
+        if(width < 610) return 1;
+        else if(width < 930) return 2;
+        else if(width < 1260) return 3;
+        else return 4;
     }
     renderTimelineComponents(){
         let elements = [];
@@ -31,8 +47,7 @@ class TimelineScreen extends Component{
         for (let i=0; i < noOfElements; i++) {
             elements.push(<TimelineComponent key={i} timelineData = {data[i]}/>);
         }
-        return elements
-        
+        return elements   
     }
     render(){
         return(
@@ -40,7 +55,7 @@ class TimelineScreen extends Component{
                 <div className = "timeline-header">
                     <div className = "timeline-heading"> TimeLine </div>
                 </div>
-                <div className = "timeline-viewpane">
+                <div className = "timeline-viewpane" id = "timeline-viewpane">
                     <div className= "timeline-line"><img src={timelineline} className="timeline-line-svg" alt="logo" /></div>
                     {this.renderTimelineComponents()}
                 </div>

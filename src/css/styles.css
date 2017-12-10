@@ -56,11 +56,6 @@ html, body {
 
 /*--- END : Document Styles ---*/
 /*--- START : Wrapper Styles ---*/
-.height-100vh {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/bg.png");
-  background-size: cover;
-  background-attachment: fixed; }
-
 .menuBar {
   width: 8%;
   position: fixed;

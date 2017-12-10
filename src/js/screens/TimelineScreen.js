@@ -3,6 +3,7 @@ import TimelineComponent from '../components/TimelineComponent.js';
 import '../../css/timelinescreen.css';
 import data from '../../data/timelineScreenData.json';
 import timelineline from '../../assets/img/timelineline.svg';
+import Scroll from '../components/scroll.js';
 
 
 /*
@@ -29,7 +30,7 @@ class TimelineScreen extends Component{
         let elements = [];
         let noOfElements = this.state.noOfElements * this.state.flag;
         for (let i=0; i < noOfElements; i++) {
-            elements.push(<TimelineComponent key={i} timelineData = {data[i]}/>);
+            elements.push(<TimelineComponent   key={i} timelineData = {data[i]}/>);
         }
         return elements
         
@@ -40,11 +41,13 @@ class TimelineScreen extends Component{
                 <div className = "timeline-header">
                     <div className = "timeline-heading"> TimeLine </div>
                 </div>
+               
                 <div className = "timeline-viewpane">
                     <div className= "timeline-line"><img src={timelineline} className="timeline-line-svg" alt="logo" /></div>
                     {this.renderTimelineComponents()}
+                   
                 </div>
-
+                <Scroll></Scroll>
             </div>
         )
     }

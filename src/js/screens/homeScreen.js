@@ -41,10 +41,10 @@ class HomeScreen extends Component {
     return (  
     <div>	
        <MenuBar/>
-       <ScrollableAnchor id={commonObj.sectionIds[0]}>
+       {/* <ScrollableAnchor id={commonObj.sectionIds[0]}>
           <Carousel active="1" className="height-100vh">
           </Carousel>
-       </ScrollableAnchor>
+       </ScrollableAnchor> */}
        <ScrollableAnchor id={commonObj.sectionIds[1]}>
           <div className="height-100vh">
             <AboutScreen/>

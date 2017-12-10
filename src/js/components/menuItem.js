@@ -9,6 +9,32 @@ import ContactAnimationObject from '../common/contactpage.js';
 }
 class MenuIcon extends Component{
 
+
+  constructor(){
+    super();
+    this.state = {
+      isActive : false
+    };
+  }
+  
+  addClassTo = (color,isActive,elm) =>{
+    console.log(color+isActive+elm)
+    let menuHoverEffect = document.getElementById("menu-hover-effect");
+    menuHoverEffect.style.background = color;
+    if(isActive!=null && isActive === true){
+      this.setState({
+        isActive : true
+      });
+    }
+  }
+  removeClassTo = (color) =>{
+    if(this.state.isActive !== true){
+      let menuHoverEffect = document.getElementById("menu-hover-effect");
+      menuHoverEffect.style.background = "";
+    }
+	}
+
+
   handleClick = () =>{
 		ContactAnimationObject.slideIn();
   }
@@ -24,8 +50,13 @@ class MenuIcon extends Component{
     }
 		return(
 
-      <div className = "menuBar__menuIcon">
-          {Element}
+
+
+      <div id={"menuicon-"+this.props.count} className = "menuBar__menuIcon" onMouseOver={()=>{this.addClassTo("#"+this.props.color)}} 
+      onMouseLeave={()=>{this.removeClassTo("#"+this.props.color)}}
+      onClick={(e)=>{this.addClassTo("#"+this.props.color,true,this.props.count)}}>
+        {Element}
+
       </div>
      
 		);

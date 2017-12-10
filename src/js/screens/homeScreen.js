@@ -47,7 +47,7 @@ class HomeScreen extends Component {
         <div className="height-100vh">
         </div>
       </ScrollableAnchor> */}
-       
+
     </div> 
     );
   }

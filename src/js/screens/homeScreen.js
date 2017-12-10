@@ -40,11 +40,10 @@ class HomeScreen extends Component {
         <GalleryComponent/>
       </div> 
       </ScrollableAnchor>
-      <ScrollableAnchor id={commonObj.sectionIds[4]}>
+      {/* <ScrollableAnchor id={commonObj.sectionIds[4]}>
         <div className="height-100vh">
         </div>
-      </ScrollableAnchor>
-       
+      </ScrollableAnchor> */}
     </div> 
     );
   }

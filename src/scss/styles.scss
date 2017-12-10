@@ -38,6 +38,7 @@ html, body {
     }
 
     a{
+      cursor: pointer;
       text-decoration: none;
       font-family: 'Linearicons-Free';
       line-height: 100px;
@@ -54,9 +55,18 @@ html, body {
     }
       .menuBar .menuBar__menuIcon:nth-of-type(#{$i}):hover,
         .menuBar .menuBar__menuIcon:nth-of-type(#{$i}):active{
-        border-left: 15px solid unquote("#"+nth($menuColors , $i ));
+        border-left: 10px solid unquote("#"+nth($menuColors , $i ));
         transition: all 0.5s; 
       }
+  }
+  #menu-hover-effect{
+    width: 1%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 7.8%;
+    z-index: 99;
+    transition: all 0.5s;
   }
 
 /*--- END : Wrapper Styles ---*/

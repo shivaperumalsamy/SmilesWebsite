@@ -5,25 +5,30 @@ var commonObj = {
     
      'menuItems' : [
    
-         {
+        {
             icon :'',
             name : "Home",
+            color:"4d95a3"
         },
         {
             icon :'',
             name : "About",
+            color:"d5ad3f"
         },
         {
             icon :'',
             name : "Timeline",
+            color:"d76841"
         },
         {
             icon :'',
             name : "Gallary",
+            color:"51d3c1"
         },
         {
             icon :'',
             name : "Contact us",
+            color:"d06182"
         }
         
      ],
@@ -93,26 +98,40 @@ var commonObj = {
      'gallaryObj' : [
         {
             month : 'AUGUST',
-            day : '17',
+            day : '2017',
             description : 'School visit',
-            img: '',
-            content : '',
-   
+            img: 'http://pixdaus.com/files/items/pics/2/21/531221_8d837de67576fe7e80207347163fb737_large.jpg',
+            content : [
+                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
+                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
+                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg'
+            ]
         },
         {
-            month : 'AUGUST',
-            day : '17',
+            month : 'SEPTEMBER',
+            day : '2017',
             description : 'Hostel visit',
-            img : '',
-            content : '',
-   
+            img : 'https://www.communitykids.com.au/wp-content/uploads/sites/29/2015/03/shutterstock_18547177.jpg',
+            content : [
+                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
+                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
+                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
+                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg'
+            ]
         },
         {
-            month : 'AUGUST',
-            day : '17',
-            description : 'School visit',
-            content : '',
-   
+            month : 'DECEMBER',
+            day : '2017',
+            description : 'Cultural visit',
+            img: 'https://i.pinimg.com/736x/af/85/f5/af85f5189808732119116b52525e85d8--children-laughing-make-me-smile.jpg',
+            content : [
+                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
+                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
+                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
+                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
+                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
+                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg'
+            ]
         }
          
 

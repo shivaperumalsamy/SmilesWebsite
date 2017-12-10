@@ -18,7 +18,7 @@ class MenuBar extends Component{
 	renderMenu = () => {
 		let menuItems = commonObj['menuItems'].map((menu, index)=>{		
 			console.log(index+""+commonObj.sectionIds[index]);	
-			return <MenuIcon icon = {menu.icon} value = {menu.name} key = {index} sectionId={commonObj.sectionIds[index]}/>	
+			return <MenuIcon color = {menu.color} counter={index} icon = {menu.icon} value = {menu.name} count={index} key = {index} sectionId={commonObj.sectionIds[index]}/>	
 		  });
 		
 		  return menuItems;
@@ -27,8 +27,11 @@ class MenuBar extends Component{
 	render(){
 		
 		return(
+			<div>
+			<div id = "menu-hover-effect"></div>
 			<div className = "menuBar">
 				{this.renderMenu()}
+			</div>
 			</div>
 		);
 	}

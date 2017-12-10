@@ -1,0 +1,63 @@
+@import '_variable';
+@import '_mixin';
+
+/*--- START : Home Wrapper Styles ---*/
+
+
+.contactBarWrapper{
+
+	
+	@include boxSize(35%, 100%);
+	
+	margin-right: -35%;
+	transition: margin 1s ease-in-out;	
+	position: fixed;
+	z-index: 3;
+	top : 0px;
+	right: 0px;
+	background-color : $theme-dark;
+
+	.contactBarWrapper__closeIcon{
+	        padding: 20px 0px 20px 35px;
+    		font-size: 40px;
+			font-family: 'Linearicons-Free';
+			cursor: pointer;
+	  		 &::after{
+	   			content :   $closeIcon;     
+        		color:  $theme-light;
+	   		} 
+	}
+	.contactBarWrapper__contactInfo{
+	          margin-left: 95px;
+	      
+			.contactHeader{
+				width: 85%;
+				
+				/* width: 56px; */
+				/* padding-right: 11px; */
+				/* padding: 5px; */
+				font-family : $foo-font-family;
+				font-size: $fontsize-M;
+				color: $contactPageThemeColor;
+				padding-bottom: 20px;
+				border-bottom: 2px solid $contactPageThemeColor;
+			}
+			
+			.contact{
+				display: inline-block;
+				font-family : $font-family;
+				color: #00B2EE;
+				margin-top : 40px;
+				&.content{
+					padding-left: 40px;
+					font-size: 30px;
+				}
+			}
+			.icon{
+				font-size: 30px;
+			}
+	 } 
+	
+}
+
+/*--- END : Home Wrapper Styles ---*/

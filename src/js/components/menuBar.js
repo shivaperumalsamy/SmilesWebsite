@@ -18,7 +18,7 @@ class MenuBar extends Component{
 	renderMenu = () => {
 		let menuItems = commonObj['menuItems'].map((menu, index)=>{		
 			console.log(index+""+commonObj.sectionIds[index]);	
-			return <MenuIcon icon = {menu.icon} value = {menu.name} key = {index} sectionId={commonObj.sectionIds[index]}/>	
+			return <MenuIcon icon = {menu.icon} value = {menu.name} counter={index} key = {index} sectionId={commonObj.sectionIds[index]}/>	
 		  });
 		
 		  return menuItems;

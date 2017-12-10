@@ -1,7 +1,11 @@
+
+
 .fa.scrollContainer__scrollRight{
   float: right;
-  margin-right: 100px;
-  padding: 20px;
+  margin-right: 10%;
+  font-size: 40px;
+  margin-top: -10%;
+
 
 }
 
@@ -9,14 +13,15 @@
   
   float: left;
   display: none;
-  padding: 20px;
+  font-size: 40px;
+  margin-left: 2.5%;
+  margin-top: -10%;
 
 }
 
 .scrollContainer{
-  width: 100%;
-  height: 200px;
-  background-color: black;  
+ 
+ 
 }
 
 .clear{

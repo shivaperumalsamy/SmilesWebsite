@@ -17,8 +17,7 @@ class MenuIcon extends Component{
     };
   }
   
-  addClassTo = (color,isActive,elm) =>{
-    console.log(color+isActive+elm)
+  addClassTo = (color,isActive) =>{
     let menuHoverEffect = document.getElementById("menu-hover-effect");
     menuHoverEffect.style.background = color;
     if(isActive!=null && isActive === true){
@@ -41,7 +40,6 @@ class MenuIcon extends Component{
   
 	render(){
     const sectionid="#"+this.props.sectionId;
-    console.log(this.props.counter);
     const flag = (this.props.counter == 4)?true:false;
     if(flag){
       Element = <a onClick = {this.handleClick}></a>;
@@ -52,9 +50,9 @@ class MenuIcon extends Component{
 
 
 
-      <div id={"menuicon-"+this.props.count} className = "menuBar__menuIcon" onMouseOver={()=>{this.addClassTo("#"+this.props.color)}} 
+      <div id={"menuicon-"+this.props.counter} className = "menuBar__menuIcon" onMouseOver={()=>{this.addClassTo("#"+this.props.color)}} 
       onMouseLeave={()=>{this.removeClassTo("#"+this.props.color)}}
-      onClick={(e)=>{this.addClassTo("#"+this.props.color,true,this.props.count)}}>
+      onClick={(e)=>{this.addClassTo("#"+this.props.color,true)}}>
         {Element}
 
       </div>

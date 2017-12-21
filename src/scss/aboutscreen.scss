@@ -17,7 +17,7 @@
         //border: 2px solid yellow ;
 
         .contentHeader{
-            font-family : $foo-font-family;
+            font-family : $futura-extra-black-font;
             font-size: $fontsize-M;
             @include boxSize(100%,19%); 
             color: unquote("#"+nth($menuColors , 2 ));
@@ -25,7 +25,7 @@
         }
 
         .content{
-            font-family : $pacifico-font-family;
+            font-family : $futura-book-font;
             //font-size: $fontsize-S;
             overflow: auto;
             font-size: 17px;

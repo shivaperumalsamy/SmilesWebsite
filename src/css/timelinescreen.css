@@ -9,12 +9,19 @@
 @font-face {
   font-family: FOO;
   src: url("../assets/fonts/FOO.ttf") format("truetype"); }
+@font-face {
+  font-family: FuturaBook;
+  src: url("../assets/fonts/futura fonts/Futura Book font.ttf") format("truetype"); }
+@font-face {
+  font-family: FuturaExtraBlack;
+  src: url("../assets/fonts/futura fonts/Futura Extra Black font.ttf") format("truetype"); }
 /* Fonts */
 /* Theme colors */
 /* Font properties */
 /* Menubar properties */
 /* Menu dynamic customizations */
 /* Timeline specific variables */
+/*Contact Page Icons */
 /* Default properties */
 * {
   margin: 0;
@@ -65,7 +72,7 @@
     .wrapper-timelinewrapper .timeline-header .timeline-heading {
       position: absolute;
       top: 50%;
-      font-family: FOO;
+      font-family: FuturaExtraBlack;
       font-size: 30px;
       color: #d76841; }
   .wrapper-timelinewrapper .timeline-viewpane {

@@ -10,6 +10,12 @@
 @font-face {
   font-family: FOO;
   src: url("../assets/fonts/FOO.ttf") format("truetype"); }
+@font-face {
+  font-family: FuturaBook;
+  src: url("../assets/fonts/futura fonts/Futura Book font.ttf") format("truetype"); }
+@font-face {
+  font-family: FuturaExtraBlack;
+  src: url("../assets/fonts/futura fonts/Futura Extra Black font.ttf") format("truetype"); }
 /* Fonts */
 /* Theme colors */
 /* Font properties */
@@ -57,6 +63,11 @@ html, body {
 
 /*--- END : Document Styles ---*/
 /*--- START : Wrapper Styles ---*/
+.height-100vh {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/bg-pattern.png");
+  background-size: cover;
+  background-attachment: fixed; }
+
 .menuBar {
   width: 8%;
   position: fixed;
@@ -75,7 +86,7 @@ html, body {
     margin-right: "";
     margin-left: auto;
     margin-bottom: "";
-    background: linear-gradient(transparent, transparent);
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
     color: #ffffff;
     font-size: 30px; }
   .menuBar a {

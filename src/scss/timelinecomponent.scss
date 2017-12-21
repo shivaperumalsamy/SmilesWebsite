@@ -21,7 +21,7 @@ $timeline-component-box-width : 250px;
     &:hover{
         top: 20%;
         border: 1px dashed unquote("#"+nth($menuColors , 3 ));
-        background-color: #333333;
+        background-color: rgba(45,45,45,0.6);;
     }
     &:hover .timeline-content{
         display: block;
@@ -31,7 +31,7 @@ $timeline-component-box-width : 250px;
         @include border-radius(75px);
         color: rgb(240, 240, 240);
         margin: auto;
-        font-family: $foo-font-family;
+        font-family: $futura-extra-black-font;
         font-size: $fontsize-M;
         padding-top: 50px;
         text-align: center;
@@ -43,7 +43,7 @@ $timeline-component-box-width : 250px;
     }
 
     .timeline-content{
-        font-family : $pacifico-font-family;
+        font-family : $futura-book-font;
         font-size: $fontsize-S;
         overflow: auto;
         font-size: 17px;

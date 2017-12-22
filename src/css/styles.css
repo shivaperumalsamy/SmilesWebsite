@@ -80,8 +80,6 @@ html, body {
   height: 100vh;
   z-index: 2; }
   .menuBar .menuBar__menuIcon {
-    width: 100px;
-    height: 100px;
     margin-top: "";
     margin-right: "";
     margin-left: auto;

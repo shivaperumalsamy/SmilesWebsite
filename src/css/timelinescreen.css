@@ -27,7 +27,13 @@
   margin: 0;
   padding: 0;
   color: white;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif; }
+
+.page-header {
+  font-size: 30px;
+  font-family: "Pacifico", cursive;
+  padding-bottom: 20px; }
 
 /* Mixin  - margin
    Params - $top, $right, $bottom, $left   
@@ -72,7 +78,6 @@
     .wrapper-timelinewrapper .timeline-header .timeline-heading {
       position: absolute;
       top: 50%;
-      font-family: FuturaExtraBlack;
       font-size: 30px;
       color: #d76841; }
   .wrapper-timelinewrapper .timeline-viewpane {

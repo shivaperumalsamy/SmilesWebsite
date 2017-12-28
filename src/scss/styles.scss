@@ -12,7 +12,7 @@ html, body {
 /*--- START : Wrapper Styles ---*/
  .height-100vh{
   //@extend.boxSizeProperties;
-  background-image : linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../assets/img/bg-pattern.png');
+  background-image : linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.2)), url('../assets/img/bg-pattern.png');
   background-size : cover;
   background-attachment : fixed;
 
@@ -23,43 +23,44 @@ html, body {
     @include boxSize(8%); 
     @include position(fixed,0, '', 0, '');
     background-color : $menu-color;
-    background:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
     //border-right: 12px solid #ffffff;
     height: 100vh;
 		z-index : 2;
     
 		.menuBar__menuIcon{
+      display: block;
       @include margin('', '', '', auto);
       background:  linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0));
       color: #ffffff;
       font-size: $fontsize-M;
-    }
 
-    a{
-      cursor: pointer;
-      text-decoration: none;
-      font-family: 'Linearicons-Free';
-      line-height: 100px;
-      margin-left: 30%;
-      cursor: pointer;
+      span {
+        cursor: pointer;
+        text-decoration: none;
+        font-family: 'Linearicons-Free';
+        line-height: 100px;
+        margin-left: 30%;
+        cursor: pointer;
+      }
     }
   }
 
   @for $i from 1 through length($menuImagesList){
     .menuBar .menuBar__menuIcon:nth-of-type(#{$i}){
-      & a::after{
+      & span::after{
         content: nth($menuImagesList , $i );
         color: unquote("#"+nth($menuColors , $i ));
       }
     }
-      .menuBar .menuBar__menuIcon:nth-of-type(#{$i}):hover,
-        .menuBar .menuBar__menuIcon:nth-of-type(#{$i}):active{
-        border-left: 10px solid unquote("#"+nth($menuColors , $i ));
+    .menuBar .menuBar__menuIcon:nth-of-type(#{$i}):hover,
+      .menuBar .menuBar__menuIcon:nth-of-type(#{$i}):active{
+        margin-left: 1px;
+        border-left: 5px solid unquote("#"+nth($menuColors , $i ));
         transition: all 0.5s; 
-      }
+    }
   }
   #menu-hover-effect{
-    width: 1%;
+    width: 2px;
     height: 100vh;
     position: fixed;
     top: 0;

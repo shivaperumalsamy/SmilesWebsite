@@ -8,27 +8,21 @@
     position: absolute; 
     @include margin(10%, '', '', 10%);
     min-width: 600px;
-    //border: 2px solid white ;
 
     .about_area{
         float: left;
         @include boxSize(55%,100%); 
         @include padding(3%, 5%, '', 3%);
-        //border: 2px solid yellow ;
 
-        .contentHeader{
-            font-family : $futura-extra-black-font;
-            font-size: $fontsize-M;
-            @include boxSize(100%,19%); 
+        .contentHeader{         
             color: unquote("#"+nth($menuColors , 2 ));
             border-bottom: 2px solid unquote("#"+nth($menuColors , 2 ));
         }
 
         .content{
-            font-family : $futura-book-font;
-            //font-size: $fontsize-S;
             overflow: auto;
             font-size: 17px;
+            line-height: 24px;
             @include boxSize(100%,80%); 
             @include padding(8%);
             color: rgb(240, 240, 240);
@@ -38,13 +32,11 @@
         float: left;
         @include boxSize(35%,100%); 
         @include padding('', '', '', 5%);
-        //border: 2px solid orange;
 
         img{
             @include boxSize(100%,100%); 
             border-radius: 2%;
             box-shadow: 0 0 15px 5px $about-shadow ;
-            //border: 2px solid violet ;
         }
     }
 }

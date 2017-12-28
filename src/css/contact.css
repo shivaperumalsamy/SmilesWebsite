@@ -28,7 +28,13 @@
   margin: 0;
   padding: 0;
   color: white;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif; }
+
+.page-header {
+  font-size: 30px;
+  font-family: "Pacifico", cursive;
+  padding-bottom: 20px; }
 
 /* Mixin  - margin
    Params - $top, $right, $bottom, $left   
@@ -80,17 +86,12 @@
     margin-left: 95px; }
     .contactBarWrapper .contactBarWrapper__contactInfo .contactHeader {
       width: 85%;
-      /* width: 56px; */
-      /* padding-right: 11px; */
-      /* padding: 5px; */
-      font-family: FuturaExtraBlack;
       font-size: 30px;
       color: #d06182;
       padding-bottom: 20px;
       border-bottom: 2px solid #d06182; }
     .contactBarWrapper .contactBarWrapper__contactInfo .contact {
       display: inline-block;
-      font-family: FuturaBook;
       color: #00B2EE;
       margin-top: 40px; }
       .contactBarWrapper .contactBarWrapper__contactInfo .contact.content {

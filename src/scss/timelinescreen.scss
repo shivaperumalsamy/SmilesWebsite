@@ -12,7 +12,6 @@
         .timeline-heading{
             position: absolute;
             top: 50%;
-            font-family: $futura-extra-black-font;
             font-size: $fontsize-M;
             color: unquote("#"+nth($menuColors , 3 ));
         }

@@ -28,7 +28,13 @@
   margin: 0;
   padding: 0;
   color: white;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif; }
+
+.page-header {
+  font-size: 30px;
+  font-family: "Pacifico", cursive;
+  padding-bottom: 20px; }
 
 /* Mixin  - margin
    Params - $top, $right, $bottom, $left   
@@ -64,7 +70,7 @@ html, body {
 /*--- END : Document Styles ---*/
 /*--- START : Wrapper Styles ---*/
 .height-100vh {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/bg-pattern.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("../assets/img/bg-pattern.png");
   background-size: cover;
   background-attachment: fixed; }
 
@@ -76,72 +82,77 @@ html, body {
   right: 0;
   bottom: "";
   background-color: black;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   height: 100vh;
   z-index: 2; }
   .menuBar .menuBar__menuIcon {
+    display: block;
     margin-top: "";
     margin-right: "";
     margin-left: auto;
     margin-bottom: "";
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    background: linear-gradient(transparent, transparent);
     color: #ffffff;
     font-size: 30px; }
-  .menuBar a {
-    cursor: pointer;
-    text-decoration: none;
-    font-family: 'Linearicons-Free';
-    line-height: 100px;
-    margin-left: 30%;
-    cursor: pointer; }
+    .menuBar .menuBar__menuIcon span {
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'Linearicons-Free';
+      line-height: 100px;
+      margin-left: 30%;
+      cursor: pointer; }
 
-.menuBar .menuBar__menuIcon:nth-of-type(1) a::after {
+.menuBar .menuBar__menuIcon:nth-of-type(1) span::after {
   content: "";
   color: #4d95a3; }
 
 .menuBar .menuBar__menuIcon:nth-of-type(1):hover,
 .menuBar .menuBar__menuIcon:nth-of-type(1):active {
-  border-left: 10px solid #4d95a3;
+  margin-left: 1px;
+  border-left: 5px solid #4d95a3;
   transition: all 0.5s; }
 
-.menuBar .menuBar__menuIcon:nth-of-type(2) a::after {
+.menuBar .menuBar__menuIcon:nth-of-type(2) span::after {
   content: "";
   color: #d5ad3f; }
 
 .menuBar .menuBar__menuIcon:nth-of-type(2):hover,
 .menuBar .menuBar__menuIcon:nth-of-type(2):active {
-  border-left: 10px solid #d5ad3f;
+  margin-left: 1px;
+  border-left: 5px solid #d5ad3f;
   transition: all 0.5s; }
 
-.menuBar .menuBar__menuIcon:nth-of-type(3) a::after {
+.menuBar .menuBar__menuIcon:nth-of-type(3) span::after {
   content: "";
   color: #d76841; }
 
 .menuBar .menuBar__menuIcon:nth-of-type(3):hover,
 .menuBar .menuBar__menuIcon:nth-of-type(3):active {
-  border-left: 10px solid #d76841;
+  margin-left: 1px;
+  border-left: 5px solid #d76841;
   transition: all 0.5s; }
 
-.menuBar .menuBar__menuIcon:nth-of-type(4) a::after {
+.menuBar .menuBar__menuIcon:nth-of-type(4) span::after {
   content: "";
   color: #51d3c1; }
 
 .menuBar .menuBar__menuIcon:nth-of-type(4):hover,
 .menuBar .menuBar__menuIcon:nth-of-type(4):active {
-  border-left: 10px solid #51d3c1;
+  margin-left: 1px;
+  border-left: 5px solid #51d3c1;
   transition: all 0.5s; }
 
-.menuBar .menuBar__menuIcon:nth-of-type(5) a::after {
+.menuBar .menuBar__menuIcon:nth-of-type(5) span::after {
   content: "";
   color: #d06182; }
 
 .menuBar .menuBar__menuIcon:nth-of-type(5):hover,
 .menuBar .menuBar__menuIcon:nth-of-type(5):active {
-  border-left: 10px solid #d06182;
+  margin-left: 1px;
+  border-left: 5px solid #d06182;
   transition: all 0.5s; }
 
 #menu-hover-effect {
-  width: 1%;
+  width: 2px;
   height: 100vh;
   position: fixed;
   top: 0;

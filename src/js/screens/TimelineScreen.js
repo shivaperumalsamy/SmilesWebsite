@@ -56,7 +56,7 @@ class TimelineScreen extends Component{
         return(
             <div className = "wrapper-timelinewrapper">
                 <div className = "timeline-header">
-                    <div className = "timeline-heading"> TimeLine </div>
+                    <div className = "timeline-heading page-header"> Through the years </div>
                 </div>
 
                 <div className = "timeline-viewpane" id = "timeline-viewpane">

@@ -13,7 +13,7 @@ class ContentBar extends Component{
 		return(
 			<div className = "wrapper__homeWrapper">
       			<div className = "homeWrapper__ContentWrapper">
-          			<div className = "contentHeader">{this.props.contentObj.headerContent}</div>
+          			<div className = "page-header">{this.props.contentObj.headerContent}</div>
           			<div className = "content">
             			<p>{this.props.contentObj.mainContent}</p>
       	  			</div>

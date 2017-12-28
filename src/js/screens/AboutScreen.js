@@ -14,7 +14,7 @@ class AboutScreen extends Component{
         return ( 
             <div className = "wrapper_aboutwrapper">
                 <div className = "about_area">
-                    <div className = "contentHeader"> What we do?</div>
+                    <div className = "contentHeader page-header"> What we do?</div>
                     <div className = "content">
                         {data.aboutContent}
                     </div>

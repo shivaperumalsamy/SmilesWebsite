@@ -27,7 +27,13 @@
   margin: 0;
   padding: 0;
   color: white;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif; }
+
+.page-header {
+  font-size: 30px;
+  font-family: "Pacifico", cursive;
+  padding-bottom: 20px; }
 
 /* Mixin  - margin
    Params - $top, $right, $bottom, $left   
@@ -66,7 +72,7 @@
   margin-bottom: ""; }
   .wrapper__homeWrapper .homeWrapper__ContentWrapper {
     margin-top: 100px;
-    font-family: "Satisfy", cursive;
+    font-family: "Josefin Sans", sans-serif;
     padding-left: 20%; }
     .wrapper__homeWrapper .homeWrapper__ContentWrapper .contentHeader {
       font-size: 50px; }

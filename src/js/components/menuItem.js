@@ -9,7 +9,6 @@ import ContactAnimationObject from '../common/contactpage.js';
 }
 class MenuIcon extends Component{
 
-
   constructor(){
     super();
     this.state = {
@@ -42,21 +41,17 @@ class MenuIcon extends Component{
     const sectionid="#"+this.props.sectionId;
     const flag = (this.props.counter == 4)?true:false;
     if(flag){
-      Element = <a onClick = {this.handleClick}></a>;
+      Element = <span onClick = {this.handleClick}></span>;
     }else{
-      Element = <a href={sectionid}></a>;
+      Element = <span ></span>;
     }
 		return(
-
-
-
-      <div id={"menuicon-"+this.props.counter} className = "menuBar__menuIcon" onMouseOver={()=>{this.addClassTo("#"+this.props.color)}} 
+      <a id={"menuicon-"+this.props.counter} className = "menuBar__menuIcon" onMouseOver={()=>{this.addClassTo("#"+this.props.color)}} 
       onMouseLeave={()=>{this.removeClassTo("#"+this.props.color)}}
-      onClick={(e)=>{this.addClassTo("#"+this.props.color,true)}}>
+      href={sectionid}
+      onClick={(e)=>{this.addClassTo("#"+this.props.color,true);}}>
         {Element}
-
-      </div>
-     
+      </a>   
 		);
 	}
 }

@@ -1,10 +1,4 @@
-/* Default properties */
-*{
-	margin : 0;
-	padding : 0;
-	color : white;
-	box-sizing : border-box;
-}
+@import '_commons';
 
 /* Mixin  - margin
    Params - $top, $right, $bottom, $left   

@@ -4,11 +4,8 @@
 /*--- START : Home Wrapper Styles ---*/
 
 
-.contactBarWrapper{
-
-	
-	@include boxSize(35%, 100%);
-	
+.contactBarWrapper{	
+	@include boxSize(35%, 100%);	
 	margin-right: -35%;
 	transition: margin 1s ease-in-out;	
 	position: fixed;
@@ -32,11 +29,6 @@
 	      
 			.contactHeader{
 				width: 85%;
-				
-				/* width: 56px; */
-				/* padding-right: 11px; */
-				/* padding: 5px; */
-				font-family : $futura-extra-black-font;
 				font-size: $fontsize-M;
 				color: $contactPageThemeColor;
 				padding-bottom: 20px;
@@ -45,7 +37,6 @@
 			
 			.contact{
 				display: inline-block;
-				font-family : $futura-book-font;
 				color: #00B2EE;
 				margin-top : 40px;
 				&.content{

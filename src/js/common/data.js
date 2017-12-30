@@ -34,11 +34,11 @@ var commonObj = {
      ],
 
      "sectionIds" : [
-        "section1",
-        "section2",
-        "section3",
-        "section4",
-        "section5",
+        "Home",
+        "About",
+        "Timeline",
+        "Gallery",
+        "Contact",
     ],
 
     'contactObj' : [

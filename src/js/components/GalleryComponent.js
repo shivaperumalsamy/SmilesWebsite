@@ -28,7 +28,7 @@ class GalleryComponent extends Component{
         boxShadow: '0 0 15px 5px rgba(33,32,28,0.5)',
         borderRadius: '2%'
       }		
-    return <li key={index} data-images={menu.img} style={style} data-contents={menu.content}>
+    return <li key={index} style={style}>
                   <span className="img-container item-month-year page-content">{menu.month} {menu.day}</span>
                   <span className="img-container item-description page-content">{menu.description}</span>
             </li>	

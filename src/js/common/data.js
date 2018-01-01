@@ -100,40 +100,38 @@ var commonObj = {
             month : 'AUGUST',
             day : '2017',
             description : 'School visit',
-            img: 'http://pixdaus.com/files/items/pics/2/21/531221_8d837de67576fe7e80207347163fb737_large.jpg',
-            content : [
-                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
-                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
-                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg'
-            ]
+            img: 'http://pixdaus.com/files/items/pics/2/21/531221_8d837de67576fe7e80207347163fb737_large.jpg'
         },
         {
             month : 'SEPTEMBER',
             day : '2017',
             description : 'Hostel visit',
-            img : 'https://www.communitykids.com.au/wp-content/uploads/sites/29/2015/03/shutterstock_18547177.jpg',
-            content : [
-                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
-                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
-                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
-                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg'
-            ]
+            img : 'https://www.communitykids.com.au/wp-content/uploads/sites/29/2015/03/shutterstock_18547177.jpg'
         },
         {
             month : 'DECEMBER',
             day : '2017',
             description : 'Cultural visit',
-            img: 'https://i.pinimg.com/736x/af/85/f5/af85f5189808732119116b52525e85d8--children-laughing-make-me-smile.jpg',
-            content : [
-                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
-                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
-                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
-                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
-                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg',
-                'https://i.ytimg.com/vi/a7otwzO2C0o/maxresdefault.jpg'
-            ]
-        }
-         
+            img: 'https://i.pinimg.com/736x/af/85/f5/af85f5189808732119116b52525e85d8--children-laughing-make-me-smile.jpg'
+        },
+        {
+            month : 'JUNE',
+            day : '2017',
+            description : 'School visit',
+            img: 'https://i.pinimg.com/originals/7c/cf/3d/7ccf3df6085e467c81cd34689761bf0c.jpg'
+        },
+        {
+            month : 'JULY',
+            day : '2017',
+            description : 'Hostel visit',
+            img : 'https://epilepsyfoundation.org.nz/wp-content/uploads/2017/05/pexels-photo-225017.jpg'
+        },
+        {
+            month : 'OCTOBER',
+            day : '2017',
+            description : 'Cultural visit',
+            img: 'http://www.theteachersacademy.com/blog/wp-content/uploads/2016/09/paint-hands.jpg'
+        }    
 
      ]
     }

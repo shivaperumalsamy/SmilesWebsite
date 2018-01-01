@@ -37,8 +37,9 @@
     width: 90%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: flex-start;
+    align-content: space-around;
     list-style-type: none;
     padding: 0;
   }
@@ -46,7 +47,8 @@
   #gallery-carousel ul li {
     position: relative;
     width: 30%;
-    height: 400px;
+    height: 200px;
+    margin-bottom: 50px;
   }
 
   #gallery-carousel ul li:after {

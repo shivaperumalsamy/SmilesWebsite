@@ -10,7 +10,7 @@
 	transition: margin 1s ease-in-out;	
 	position: fixed;
 	z-index: 3;
-	top : 0px;
+	top : 0px; 
 	right: 0px;
 	background-color : $theme-dark;
 
@@ -29,7 +29,6 @@
 	      
 			.contactHeader{
 				width: 85%;
-				font-size: $fontsize-M;
 				color: $contactPageThemeColor;
 				padding-bottom: 20px;
 				border-bottom: 2px solid $contactPageThemeColor;
@@ -41,7 +40,6 @@
 				margin-top : 40px;
 				&.content{
 					padding-left: 40px;
-					font-size: 30px;
 				}
 			}
 			.icon{

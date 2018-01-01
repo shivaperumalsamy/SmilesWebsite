@@ -29,8 +29,8 @@ class GalleryComponent extends Component{
         borderRadius: '2%'
       }		
     return <li key={index} data-images={menu.img} style={style} data-contents={menu.content}>
-                  <span className="img-container item-month-year">{menu.month} {menu.day}</span>
-                  <span className="img-container item-description">{menu.description}</span>
+                  <span className="img-container item-month-year page-content">{menu.month} {menu.day}</span>
+                  <span className="img-container item-description page-content">{menu.description}</span>
             </li>	
     });
     return galleryItems;
@@ -39,7 +39,7 @@ class GalleryComponent extends Component{
 	render(){
 		return(
             <div className="gallery-wrapper">
-            <header>Gallery</header>
+            <header className="page-header">Gallery</header>
             <section>
                 <div id="gallery-carousel">
                     <ul>

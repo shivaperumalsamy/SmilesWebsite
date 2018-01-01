@@ -1,5 +1,21 @@
+/*
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+@font-face {
+	font-family: FOO;
+	src: url('../assets/fonts/FOO.ttf') format('truetype');
+}
+//There are multiple types futura fonts available, i've included everything in assets/futura fonts folder.
+@font-face{
+	font-family: FuturaBook;
+	src: url('../assets/fonts/futura fonts/Futura Book font.ttf') format('truetype')
+} 
+@font-face {
+	font-family: FuturaExtraBlack;
+	src: url('../assets/fonts/futura fonts/Futura Extra Black font.ttf') format('truetype');
+} */
+
 @font-face {
 	font-family: 'Linearicons-Free';
 	src:url('../assets/fonts/Linearicons-Free.eot?w118d');
@@ -11,21 +27,9 @@
 	font-weight: normal;
 	font-style: normal;
 }
-@font-face {
-	font-family: FOO;
-	src: url('../assets/fonts/FOO.ttf') format('truetype');
-}
-//There are multiple types futura fonts available, i've included everything in assets/futura fonts folder.
-@font-face{
-	font-family: FuturaBook;
-	src: url('../assets/fonts/futura fonts/Futura Book font.ttf') format('truetype')
-}
-@font-face {
-	font-family: FuturaExtraBlack;
-	src: url('../assets/fonts/futura fonts/Futura Extra Black font.ttf') format('truetype');
-}
+
 /* Fonts */
-$font-family: 'Josefin Sans', sans-serif;
+$josefin-font: 'Josefin Sans', sans-serif;
 $pacifico-font : 'Pacifico', cursive;
 
 /* Theme colors */

@@ -41,8 +41,8 @@ class Carousel extends Component{
     }
     //Renders the main slide
     renderSlide() {
-        console.log("active state ",this.state.active)
-        console.log("datum",data[this.state.active])
+        //console.log("active state ",this.state.active)
+        //console.log("datum",data[this.state.active])
         return <Slide key={this.state.active} imgData={data[this.state.active]} />
     }
     //Function to silde left
@@ -86,7 +86,7 @@ class Carousel extends Component{
         })
         this.removePreviousLegendClick();
         for(let i=0;i<data.length;i++){
-            if(i==index){
+            if(i === index){
                 var htmlCircleSpan=React.createElement('span',{className:"circle"},'');
                 ReactDOM.render(htmlCircleSpan,document.getElementById("legend_"+index));
             }
@@ -106,12 +106,6 @@ class Carousel extends Component{
 
         return(
             <div className="carouselViewpane">
-                {/* <CSSTransitionGroup 
-                    transitionName='slider'
-                    transitionEnterTimeout={500}
-                    transitionLeaveTimeout={500}>
-                    {this.renderSlide()}
-                </CSSTransitionGroup> */}
                 <CSSTransitionGroup transitionName='slider'
                 transitionEnterTimeout={5}
                     transitionLeaveTimeout={-1}>

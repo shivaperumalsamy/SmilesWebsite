@@ -58,12 +58,9 @@ class TimelineScreen extends Component{
                 <div className = "timeline-header">
                     <div className = "timeline-heading page-header"> Through the years </div>
                 </div>
-
                 <div className = "timeline-viewpane" id = "timeline-viewpane">
-
                     <div className= "timeline-line"><img src={timelineline} className="timeline-line-svg" alt="logo" /></div>
-                    {this.renderTimelineComponents()}
-                    
+                    {this.renderTimelineComponents()}   
                 </div>
                 <Scroll></Scroll>
               

@@ -40,7 +40,7 @@ class Contact extends Component{
 			<div className = "contactBarWrapper">
 				<div className = "contactBarWrapper__closeIcon" onClick = {this.handleClick}></div>
 				<div className = "contactBarWrapper__contactInfo">
-						<div className = "contactHeader">GET IN TOUCH</div>
+						<div className = "contactHeader page-header">GET IN TOUCH</div>
 						{this.renderContactInfo()}
 				</div>
 			</div>

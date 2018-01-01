@@ -6,8 +6,8 @@ class Timelinecomponent extends Component{
         return(
             <div className = "timeline-component" >
                 <div className = "timeline-date">
-                    <p>{this.props.timelineData.month}</p>
-                    <p>{this.props.timelineData.date}</p>
+                    <h1 className = "page-header">{this.props.timelineData.month}</h1>
+                    <h1 className = "page-header">{this.props.timelineData.date}</h1>
                 </div>
                 <div className = "timeline-content" >
                     {this.props.timelineData.content}
@@ -17,11 +17,3 @@ class Timelinecomponent extends Component{
     }
 }
 export default Timelinecomponent
-/*
-                <div className = "timeline-date">
-                    <p>{this.props.timelineData.month}</p>
-                    <p>{this.props.timelineData.date}</p>
-                </div>
-                <div className = "timeline-content">
-                    {this.props.timelineData.content}
-                </div> */

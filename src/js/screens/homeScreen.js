@@ -9,6 +9,7 @@ import AboutScreen from './AboutScreen';
 import TimelineScreen from './TimelineScreen';
 import Contact from '../components/contact';
 import '../../css/contact.css';
+import Footer from '../components/footer';
 
 /*
      Class Name: HomeScreen
@@ -39,6 +40,7 @@ class HomeScreen extends Component {
         <GalleryComponent/>
       </div> 
       </ScrollableAnchor>
+      <Footer/>
     </div> 
     );
   }

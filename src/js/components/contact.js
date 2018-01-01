@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import commonObj from '../common/data.js';
 import ContactIcon from './contactIcon.js';
-import ContactAnimationObject from '../common/contactpage.js';
 
 
 
@@ -30,15 +29,15 @@ class Contact extends Component{
 		  return contactInfo;
 	
 	} 
-	handleClick = () =>{
-		ContactAnimationObject.slideOut();
-	}
+	// handleClick = () =>{
+	// 	ContactAnimationObject.slideOut();
+	// }
 		
 	render(){
 		
 		return(
 			<div className = "contactBarWrapper">
-				<div className = "contactBarWrapper__closeIcon" onClick = {this.handleClick}></div>
+				<div className = "contactBarWrapper__closeIcon" onClick = {this.props.onClick}></div>
 				<div className = "contactBarWrapper__contactInfo">
 						<div className = "contactHeader page-header">GET IN TOUCH</div>
 						{this.renderContactInfo()}

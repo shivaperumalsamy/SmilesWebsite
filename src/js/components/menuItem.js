@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContactAnimationObject from '../common/contactpage.js';
+
 
 {
   /*
@@ -33,26 +33,19 @@ class MenuIcon extends Component{
 	}
 
 
-  handleClick = () =>{
-		ContactAnimationObject.slideIn();
-  }
+ 
   
 	render(){
     const sectionid="#"+this.props.sectionId;
-    const flag = (this.props.counter == 4)?true:false;
-    if(flag){
-      Element = <span onClick = {this.handleClick}></span>;
-    }else{
-      Element = <span ></span>;
-    }
-		return(
-      <a id={"menuicon-"+this.props.counter} className = "menuBar__menuIcon" onMouseOver={()=>{this.addClassTo("#"+this.props.color)}} 
-      onMouseLeave={()=>{this.removeClassTo("#"+this.props.color)}}
-      href={sectionid}
-      onClick={(e)=>{this.addClassTo("#"+this.props.color,true);}}>
-        {Element}
-      </a>   
-		);
+    
+      return(
+        <a id={"menuicon-"+this.props.counter} className = "menuBar__menuIcon" onMouseOver={()=>{this.addClassTo("#"+this.props.color)}} 
+        onMouseLeave={()=>{this.removeClassTo("#"+this.props.color)}}
+        href={sectionid}
+        onClick={(e)=>{this.addClassTo("#"+this.props.color,true);this.props.onClick(this.props.counter);{this.props.setBorder("menuicon-"+this.props.counter,"#"+this.props.color)}}}>
+          <span></span>
+        </a>   
+      );
 	}
 }
 

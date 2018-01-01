@@ -10,17 +10,64 @@ import TimelineScreen from './TimelineScreen';
 import Contact from '../components/contact';
 import '../../css/contact.css';
 import Footer from '../components/footer';
+import ContactAnimationObject from '../common/contactpage.js';
+
 
 /*
      Class Name: HomeScreen
      Return : @component
 */
 class HomeScreen extends Component {
+
+  constructor(props){
+		super(props);
+		this.state = {
+			flag : 0,
+			prevMenuId : null
+		}
+	}
+
+ /*
+	  function Name: handleClick  
+	  description : Toggles the Contact component
+
+	*/
+	handleClick = (counter) =>{
+	  	if(this.state.flag === 0 && counter === 4){
+        ContactAnimationObject.slideIn();
+        this.state.flag = 1;
+		  }else if(counter!== 4){
+        ContactAnimationObject.slideOut();
+        this.state.flag = 0;
+		  }else{
+        ContactAnimationObject.slideOut();  
+        this.state.flag = 0;
+		  }
+		
+    }
+  /*
+     function Name : setBorder
+     description: Sets border for the menu icon
+  */
+  setBorder = (id,color)=>{
+    
+     if(this.state.prevMenuId !== null){
+              let prev = document.getElementById(this.state.prevMenuId);
+              console.log(prev);
+              prev.style.borderLeft = "";
+              console.log(prev);
+              
+      }  
+      let element = document.getElementById(id);
+      element.style.borderLeft = "5px solid "+color;
+      this.setState({prevMenuId: id});
+}
+
   render() {
     return (  
     <div>	
-       <MenuBar/>
-       <Contact></Contact>
+       <MenuBar onClick = {this.handleClick} setBorder={this.setBorder} index = "1"></MenuBar>
+       <Contact onClick = {this.handleClick} index = "1"></Contact>
        <ScrollableAnchor id={commonObj.sectionIds[0]}>
           <Carousel active="1" className="height-100vh">
           </Carousel>

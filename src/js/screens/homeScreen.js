@@ -58,13 +58,16 @@ class HomeScreen extends Component {
     
      if(this.state.prevMenuId !== null){
               let prev = document.getElementById(this.state.prevMenuId);
-              console.log(prev);
               prev.style.borderLeft = "";
-              console.log(prev);
+              let menuHoverEffect = document.getElementById("menu-hover-effect");
+              menuHoverEffect.style.background = "";
               
       }  
       let element = document.getElementById(id);
       element.style.borderLeft = "5px solid "+color;
+      let menuHoverEffect = document.getElementById("menu-hover-effect");
+      menuHoverEffect.style.background = color;
+      console.log(menuHoverEffect);
       this.setState({prevMenuId: id});
 }
 

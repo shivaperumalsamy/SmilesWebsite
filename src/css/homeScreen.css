@@ -76,6 +76,13 @@
 .height-100vh {
   height: 100vh; }
 
+.bounce-loader {
+  position: absolute;
+  top: -webkit-calc(50% - 50px);
+  left: -webkit-calc(50% - 50px);
+  top: calc(50% - 50px);
+  left: calc(50% - 50px); }
+
 /*--- END : Home Wrapper Styles ---*/
 
 /*# sourceMappingURL=homeScreen.css.map */

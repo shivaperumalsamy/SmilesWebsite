@@ -11,6 +11,7 @@ import Contact from '../components/contact';
 import '../../css/contact.css';
 import Footer from '../components/footer';
 import ContactAnimationObject from '../common/contactpage.js';
+import { BounceLoader } from 'react-spinners';
 
 
 /*
@@ -22,10 +23,14 @@ class HomeScreen extends Component {
   constructor(props){
 		super(props);
 		this.state = {
+      loading: true,
 			flag : 0,
 			prevMenuId : null
 		}
-	}
+  }
+  componentDidMount() {
+    setTimeout(() => this.setState({ loading: false }), 1500); // simulates an async action, and hides the spinner
+  }
 
  /*
 	  function Name: handleClick  
@@ -64,6 +69,13 @@ class HomeScreen extends Component {
 }
 
   render() {
+    const { loading } = this.state;
+    
+    if(loading) { 
+      return <div className = "bounce-loader">
+                <BounceLoader size={100} color={'#FFC0CB'} loading={true} />
+             </div> 
+    }
     return (  
     <div>	
        <MenuBar onClick = {this.handleClick} setBorder={this.setBorder} index = "1"></MenuBar>

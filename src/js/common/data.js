@@ -43,27 +43,37 @@ var commonObj = {
 
     'contactObj' : [
        {
-         icon : 'fa fa-twitter',
-         name : 'twitter',
-         content : 'follow us',
-
-       },
-       {
          icon : 'fa fa-facebook',
          name : 'facebook',
          content : 'join us',
+         refUrl : 'https://www.facebook.com/avnettouch',
+         target : '_blank'
          
+       },
+       {
+        icon : 'fa fa-envelope',
+        name : 'Outlook',
+        content : 'write to us',
+        refUrl : 'mailto:sirius.indiasmilesteam@siriuscom.com',
+        target : '_self'
+        
        },
        {
          icon : 'fa fa-phone',
          name : 'phone',
          content : 'call us',
+         refUrl : "javascript:void(0)",
+         target : '_self'
+         
          
        },
        {
          icon : 'fa fa-map-marker',
          name : 'address',
          content : 'meet us',
+         refUrl : 'https://www.google.co.in/maps/place/Sirius/@12.991529,80.245532,15z/data=!4m5!3m4!1s0x0:0x2c86fc31ba87b93d!8m2!3d12.991529!4d80.245532',
+         target : '_blank'
+         
          
        }
 

@@ -39,10 +39,9 @@ class MenuIcon extends Component{
     const sectionid="#"+this.props.sectionId;
     
       return(
-        <a id={"menuicon-"+this.props.counter} className = "menuBar__menuIcon" onMouseOver={()=>{this.addClassTo("#"+this.props.color)}} 
-        onMouseLeave={()=>{this.removeClassTo("#"+this.props.color)}}
+        <a id={"menuicon-"+this.props.counter} className = "menuBar__menuIcon" 
         href={sectionid}
-        onClick={(e)=>{this.addClassTo("#"+this.props.color,true);this.props.onClick(this.props.counter);{this.props.setBorder("menuicon-"+this.props.counter,"#"+this.props.color)}}}>
+        onClick={(e)=>{this.props.onClick(this.props.counter);{this.props.setBorder("menuicon-"+this.props.counter,"#"+this.props.color)}}}>
           <span></span>
         </a>   
       );

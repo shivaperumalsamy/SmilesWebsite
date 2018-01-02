@@ -20,10 +20,7 @@ class Contact extends Component{
 		*/
 	renderContactInfo = () => {
 		let contactInfo = commonObj['contactObj'].map((contact, index)=>{	
-            console.log("icon"+contact.icon);
-			return <ContactIcon icon = {contact.icon} value = {contact.content} key = {index} />;
-			
-			
+			return <ContactIcon icon = {contact.icon} target = {contact.target} value = {contact.content} url = {contact.refUrl} key = {index} />;			
 		  });
 		
 		  return contactInfo;

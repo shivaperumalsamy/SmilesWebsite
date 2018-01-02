@@ -29,7 +29,7 @@ class ContactIcon extends Component{
                         
 				
 							<div className = "contact icon "><i className= {this.props.icon} aria-hidden="true"></i></div>
-							<div className = "contact content page-header">{this.props.value}</div>
+							<a href={this.props.url} target = {this.props.target}><div className = "contact content page-header">{this.props.value}</div></a>
 											
 				</div>
 			

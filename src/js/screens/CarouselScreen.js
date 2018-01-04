@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import axios from 'axios';
 import { CSSTransitionGroup } from 'react-transition-group'
 
 import Slide from '../components/Slider.js';
@@ -49,22 +48,22 @@ class Carousel extends Component{
     }
     //Function Name: componentWillMount()
     //Description: Returns the Data retrieved from the node module.
-    componentWillMount(){
-        axios({
-            method:'get',
-            url:'https://sirius-smiles-cms.herokuapp.com/CarouselData',
-            auth:{
-                user: 'siva',
-                password: 'P@ssw0rd'
-            }
-          }).then(function (response) {
-    console.log("Response hey :" + response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+//     componentWillMount(){
+//         axios({
+//             method:'get',
+//             url:'https://sirius-smiles-cms.herokuapp.com/CarouselData',
+//             auth:{
+//                 user: 'siva',
+//                 password: 'P@ssw0rd'
+//             }
+//           }).then(function (response) {
+//     console.log("Response hey :" + response);
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   });
 
-    }
+//     }
     //Function to silde left
     moveLeft() {
         clearInterval(this.timer)

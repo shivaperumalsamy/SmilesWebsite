@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 import { CSSTransitionGroup } from 'react-transition-group'
 
 import Slide from '../components/Slider.js';
@@ -13,7 +14,8 @@ class Carousel extends Component{
         super(props);
         this.state = {
             items: ['hello', 'world', 'click', 'me'],
-            active: this.props.active, 
+            active: this.props.active,
+            image:[] 
         }
         this.leftClick = this.moveLeft.bind(this)
         this.rightClick = this.moveRight.bind(this)
@@ -44,6 +46,24 @@ class Carousel extends Component{
         //console.log("active state ",this.state.active)
         //console.log("datum",data[this.state.active])
         return <Slide key={this.state.active} imgData={data[this.state.active]} />
+    }
+    //Function Name: componentWillMount()
+    //Description: Returns the Data retrieved from the node module.
+    componentWillMount(){
+        axios({
+            method:'get',
+            url:'https://sirius-smiles-cms.herokuapp.com/CarouselData',
+            auth:{
+                user: 'siva',
+                password: 'P@ssw0rd'
+            }
+          }).then(function (response) {
+    console.log("Response hey :" + response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
     }
     //Function to silde left
     moveLeft() {

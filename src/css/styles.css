@@ -80,7 +80,7 @@ html, body {
 /*--- END : Document Styles ---*/
 /*--- START : Wrapper Styles ---*/
 .height-100vh {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("../assets/img/bg-pattern.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("../assets/img/bg_pattern/2.png");
   background-size: cover;
   background-attachment: fixed; }
 
@@ -168,7 +168,8 @@ html, body {
   top: 0;
   right: 7.8%;
   z-index: 99;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  background-color: #4d95a3; }
 
 /*--- END : Wrapper Styles ---*/
 

@@ -23,7 +23,24 @@
             top:35%;
             img{
                 width: 100%
-            }
+            } 
         }
     }
+    .fa.scrollContainer__scrollRight{
+        float: right;
+        margin-right: 10%;
+        font-size: 40px;
+        margin-top: -10%;
+      }
+      
+      .fa.scrollContainer__scrollLeft{
+        float: left;
+        font-size: 40px;
+        margin-left: 2.5%;
+        margin-top: -10%;
+      }
+      
+      .clear{
+        float: none;
+      }
 }

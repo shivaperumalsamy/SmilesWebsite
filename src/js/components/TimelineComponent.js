@@ -3,6 +3,7 @@ import '../../css/timelinecomponent.css';
 
 class Timelinecomponent extends Component{
     render(){
+        console.log("timeline component = ",this.props.timelineData.month,this.props.timelineData.date);
         return(
             <div className = "timeline-component" >
                 <div className = "timeline-date">
@@ -16,4 +17,4 @@ class Timelinecomponent extends Component{
         )
     }
 }
-export default Timelinecomponent
+export default Timelinecomponent;

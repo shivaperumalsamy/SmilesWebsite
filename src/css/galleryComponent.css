@@ -27,6 +27,7 @@
 /* Menubar properties */
 /* Menu dynamic customizations */
 /* Timeline specific variables */
+/* Footer height */
 /*Contact Page Icons */
 /* Default properties */
 * {
@@ -82,7 +83,7 @@ header {
   padding-bottom: 20px;
   color: #51e3c1;
   border-bottom: 2px solid #51e3c1;
-  font-size: 50px; }
+  font-size: 30px; }
 
 body {
   background: #eee;
@@ -129,7 +130,7 @@ a {
 
 #gallery-carousel ul li:hover:after {
   cursor: pointer;
-  opacity: 1; }
+  opacity: 0.2; }
 
 #gallery-carousel ul li:hover span.img-container {
   display: block; }
@@ -138,14 +139,17 @@ a {
   background: MistyRose; }
 
 span.img-container {
+  display: none;
   position: absolute;
-  display: none; }
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  line-height: 100%; }
 span.item-month-year {
   top: 40%;
   left: 50%;
   transform: translateX(-50%); }
 span.item-description {
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translateX(-50%);
   text-transform: capitalize; }

@@ -92,11 +92,24 @@
   .wrapper-timelinewrapper .timeline-viewpane {
     width: 100%;
     height: 80%;
-    width: 92%; }
+    width: 92%;
+    position: relative; }
     .wrapper-timelinewrapper .timeline-viewpane .timeline-line {
-      position: relative;
+      position: absolute;
       top: 35%; }
       .wrapper-timelinewrapper .timeline-viewpane .timeline-line img {
         width: 100%; }
+    .wrapper-timelinewrapper .timeline-viewpane .scrollContainer {
+      position: absolute;
+      top: 33%;
+      width: 100%; }
+      .wrapper-timelinewrapper .timeline-viewpane .scrollContainer .fa.scrollContainer__scrollRight {
+        float: right;
+        font-size: 40px; }
+      .wrapper-timelinewrapper .timeline-viewpane .scrollContainer .fa.scrollContainer__scrollLeft {
+        float: left;
+        font-size: 40px; }
+      .wrapper-timelinewrapper .timeline-viewpane .scrollContainer .clear {
+        float: none; }
 
 /*# sourceMappingURL=timelinescreen.css.map */

@@ -4,8 +4,6 @@ import TimelineComponent from '../components/TimelineComponent.js';
 import '../../css/timelinescreen.css';
 import data from '../../data/timelineScreenData.json';
 import timelineline from '../../assets/img/timelineline.svg';
-import Scroll from '../components/scroll.js';
-import scrollFunctionalityObject from '../common/scrollFunctionality.js';
 /*
     Class Name: TimelineScreen
     Return : @component
@@ -20,8 +18,26 @@ class TimelineScreen extends Component{
             flag : 1
         }
     }
+    componentDidUpdate(){
+        console.log("component did update in timeline screen");
+        if(this.state.noOfElements * this.state.flag > data.length){
+            console.log("condition for hiding right");
+            let scrollRightElement = document.getElementsByClassName('scrollContainer__scrollRight')[0];
+            let scrollLeftElement = document.getElementsByClassName('scrollContainer__scrollLeft')[0];
+            scrollRightElement.style.display = 'none';
+            scrollLeftElement.style.display = 'block';
+        }
+        if((this.state.flag -1) * this.state.noOfElements == 0){
+            console.log("condition for hiding left");
+            let scrollRightElement = document.getElementsByClassName('scrollContainer__scrollRight')[0];
+            let scrollLeftElement = document.getElementsByClassName('scrollContainer__scrollLeft')[0];
+            scrollRightElement.style.display = 'block';
+            scrollLeftElement.style.display = 'none';
+        }
+    }
     componentDidMount() {
         window.addEventListener('resize', this.throttleResize);
+        this.componentDidUpdate();
    }
     componentWillUnmount() {
         console.log("component unmounting");
@@ -87,22 +103,6 @@ class TimelineScreen extends Component{
         });
         console.log("inside handle click = "+this.state.flag);
     }
-    componentDidUpdate(){
-        if(this.state.noOfElements * this.state.flag > data.length){
-            console.log("condition for hiding right");
-            let scrollRightElement = document.getElementsByClassName('scrollContainer__scrollRight')[0];
-            let scrollLeftElement = document.getElementsByClassName('scrollContainer__scrollLeft')[0];
-            scrollRightElement.style.display = 'none';
-            scrollLeftElement.style.display = 'block';
-        }
-        if((this.state.flag -1) * this.state.noOfElements == 0){
-            console.log("condition for hiding left");
-            let scrollRightElement = document.getElementsByClassName('scrollContainer__scrollRight')[0];
-            let scrollLeftElement = document.getElementsByClassName('scrollContainer__scrollLeft')[0];
-            scrollRightElement.style.display = 'block';
-            scrollLeftElement.style.display = 'none';
-        }
-    }
     render(){
         return(
             <div className = "wrapper-timelinewrapper">
@@ -112,17 +112,15 @@ class TimelineScreen extends Component{
                 <div className = "timeline-viewpane" id = "timeline-viewpane">
                     <div className= "timeline-line"><img src={timelineline} className="timeline-line-svg" alt="logo" /></div>
                     {this.renderTimelineComponents()}   
-                </div>
-                <div className = "scrollContainer">          
-                    <i className="fa fa-arrow-right scrollContainer__scrollRight" aria-hidden="true" onClick = {()=>this.handleClick(1)}></i>
-                    <i className="fa fa-arrow-left scrollContainer__scrollLeft" aria-hidden="true"  onClick = {()=>this.handleClick(-1)}></i>
+                    <div className = "scrollContainer">          
+                        <i className="fa fa-arrow-right scrollContainer__scrollRight" aria-hidden="true" onMouseOver = {()=>this.handleClick(1)}></i>
+                        <i className="fa fa-arrow-left scrollContainer__scrollLeft" aria-hidden="true"  onMouseOver = {()=>this.handleClick(-1)}></i>
                     <div className = "clear"></div>
                 </div>
-              
+                </div> 
             </div>
         )
     }
-
 }
 
 export default TimelineScreen;

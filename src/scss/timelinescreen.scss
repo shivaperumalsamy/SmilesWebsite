@@ -18,29 +18,34 @@
     .timeline-viewpane{
         @include boxSize(100%,$timeline-body-height) ;
         width: 92%;
+        position: relative;
         .timeline-line{
-            position: relative;
+            position: absolute;
             top:35%;
             img{
                 width: 100%
             } 
         }
+        .scrollContainer{
+            position: absolute;
+            top: 33%;
+            width: 100%;
+            .fa.scrollContainer__scrollRight{
+                float: right;
+                //margin-right: 10%;
+                font-size: 40px;
+                //margin-top: -10%;
+              }
+              
+              .fa.scrollContainer__scrollLeft{
+                float: left;
+                font-size: 40px;
+                //margin-left: 2.5%;
+                //margin-top: -10%;
+              }
+              .clear{
+                float: none;
+              }
+        }
     }
-    .fa.scrollContainer__scrollRight{
-        float: right;
-        margin-right: 10%;
-        font-size: 40px;
-        margin-top: -10%;
-      }
-      
-      .fa.scrollContainer__scrollLeft{
-        float: left;
-        font-size: 40px;
-        margin-left: 2.5%;
-        margin-top: -10%;
-      }
-      
-      .clear{
-        float: none;
-      }
 }

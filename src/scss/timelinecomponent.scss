@@ -10,7 +10,7 @@ $timeline-component-box-width : 250px;
     @include boxSize($timeline-component-box-width,$timeline-component-box-height);
     @include margin('',2%,'','');
     position: relative;
-    top: 34%;
+    top: 36%;
     background-color: transparent;
     border-color: unquote("#"+nth($menuColors , 3 ));
     transition: border 0.5s,top 1s,display 0.5s;
@@ -26,7 +26,7 @@ $timeline-component-box-width : 250px;
     &:hover .timeline-content{
         display: block;
     }
-    .timeline-date{
+    .timeline-date{ 
         @include boxSize(150px,150px); 
         @include border-radius(75px);
         color: rgb(240, 240, 240);

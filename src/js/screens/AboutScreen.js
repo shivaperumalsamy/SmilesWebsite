@@ -12,9 +12,11 @@ class AboutScreen extends Component{
 
     render() {
         return ( 
+            <div className="wrapper_AboutHeaderandContent">
+            <div className = "contentHeader page-header"> <p className = "page-header">What we do?</p></div>
             <div className = "wrapper_aboutwrapper">
                 <div className = "about_area">
-                    <div className = "contentHeader page-header"> What we do?</div>
+                    
                     <div className = "content page-content">
                         {data.aboutContent}
                     </div>
@@ -23,7 +25,7 @@ class AboutScreen extends Component{
                     <img src={aboutImage} alt="about"/>
                 </div>
             </div>
-
+            </div>
         );
       }
 

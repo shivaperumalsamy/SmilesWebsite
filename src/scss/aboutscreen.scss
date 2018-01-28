@@ -3,21 +3,37 @@
 
 /* Start about wrapper styles */
 
+.wrapper_AboutHeaderandContent{
+
+    position: relative;
+    @include boxSize(100%,100%); 
+
+    .contentHeader{         
+        position: absolute;
+        @include boxSize(92%,20%); 
+        left:8%;
+        border-bottom: 2px solid unquote("#"+nth($menuColors , 2 ));
+        p{
+            position: absolute;
+            top: 50%;
+            color: unquote("#"+nth($menuColors , 2 ));
+        }
+    }
+
+}
+
+
 .wrapper_aboutwrapper{
     @include boxSize(80%,60%); 
     position: absolute; 
-    @include margin(10%, '', '', 10%);
+    @include margin(10%, '', '', 5.5%);
     min-width: 600px;
 
     .about_area{
         float: left;
         @include boxSize(55%,100%); 
         @include padding(3%, 5%, '', 3%);
-
-        .contentHeader{         
-            color: unquote("#"+nth($menuColors , 2 ));
-            border-bottom: 2px solid unquote("#"+nth($menuColors , 2 ));
-        }
+        @include margin(-2%,'','','');
 
         .content{
             overflow: auto;

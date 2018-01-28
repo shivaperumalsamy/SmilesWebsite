@@ -37,6 +37,7 @@ class MenuIcon extends Component{
   
 	render(){
     const sectionid="#"+this.props.sectionId;
+    console.log('menuitem props',this.props)
     
       return(
         <a id={"menuicon-"+this.props.counter} className = "menuBar__menuIcon" 

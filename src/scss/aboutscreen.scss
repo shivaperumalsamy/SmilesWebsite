@@ -26,6 +26,7 @@
 .wrapper_aboutwrapper{
     @include boxSize(80%,60%); 
     position: absolute; 
+    top: 10%;
     @include margin(10%, '', '', 5.5%);
     min-width: 600px;
 
@@ -38,7 +39,7 @@
         .content{
             overflow: auto;
             line-height: 24px;
-            @include boxSize(100%,80%); 
+            @include boxSize(100%,100%); 
             @include padding(8%);
             color: rgb(240, 240, 240);
         }

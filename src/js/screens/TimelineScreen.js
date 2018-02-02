@@ -113,8 +113,8 @@ class TimelineScreen extends Component{
                     <div className= "timeline-line"><img src={timelineline} className="timeline-line-svg" alt="logo" /></div>
                     {this.renderTimelineComponents()}   
                     <div className = "scrollContainer">          
-                        <i className="fa fa-arrow-right scrollContainer__scrollRight" aria-hidden="true" onMouseOver = {()=>this.handleClick(1)}></i>
-                        <i className="fa fa-arrow-left scrollContainer__scrollLeft" aria-hidden="true"  onMouseOver = {()=>this.handleClick(-1)}></i>
+                        <i className="fa fa-arrow-right scrollContainer__scrollRight" aria-hidden="true" onClick = {()=>this.handleClick(1)}></i>
+                        <i className="fa fa-arrow-left scrollContainer__scrollLeft" aria-hidden="true"  onClick = {()=>this.handleClick(-1)}></i>
                     <div className = "clear"></div>
                 </div>
                 </div> 

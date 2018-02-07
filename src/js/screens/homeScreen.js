@@ -19,18 +19,58 @@ import { BounceLoader } from 'react-spinners';
      Return : @component
 */
 class HomeScreen extends Component {
+  
 
   constructor(props){
 		super(props);
 		this.state = {
       loading: true,
 			flag : 0,
-			prevMenuId : null
-		}
+      prevMenuId : null,
+      idHrefsMappingObj : null
+    }
+    this.setBorderOnScroll = this.setBorderOnScroll.bind(this);
+    
   }
   componentDidMount() {
     setTimeout(() => this.setState({ loading: false }), 1500); // simulates an async action, and hides the spinner
-  }
+    setTimeout(this.setIdObject.bind(this), 1500 ); // 1500 delay as loading is set to 1500 delay
+    window.addEventListener("hashchange", this.setBorderOnScroll);
+}
+
+setIdObject(){
+   
+  var els = document.getElementsByClassName("menuBar__menuIcon")
+  console.log('els',els)
+  let idHrefsMapping = {};
+      
+  Array.prototype.forEach.call(els,function (el) {
+    var currLink = el;
+    var refHref = currLink.getAttribute("href");
+    var refID = currLink.getAttribute("id");
+    console.log('testdata'+refHref + refID);
+    idHrefsMapping[refHref] = refID;
+    console.log(idHrefsMapping);
+  });
+
+  this.setState({
+    idHrefsMappingObj : idHrefsMapping
+  })
+
+}
+
+/**
+ * sets border on scrolling
+ */
+setBorderOnScroll(){
+  let component = window.location.hash;
+      if (commonObj.sectionIds.indexOf(component.substr(1)) >= 0) {
+        
+        this.setBorder(this.state.idHrefsMappingObj[component],'#'+commonObj.menuItems[commonObj.sectionIds.indexOf(component.substr(1))].color);
+      }
+}
+
+  
 
  /*
 	  function Name: handleClick  
@@ -88,17 +128,17 @@ class HomeScreen extends Component {
           </Carousel>
        </ScrollableAnchor>
        <ScrollableAnchor id={commonObj.sectionIds[1]}>
-          <div className="height-100vh">
+          <div className="height-100vh" id="abouc">
             <AboutScreen/>
           </div>
       </ScrollableAnchor>
         <ScrollableAnchor id={commonObj.sectionIds[2]}>
-          <div className="height-100vh">
+          <div className="height-100vh" id = "timec">
             <TimelineScreen />
           </div>
         </ScrollableAnchor>
       <ScrollableAnchor id={commonObj.sectionIds[3]}>
-        <div className="height-100vh">
+        <div className="height-100vh" id="gallc">
         <GalleryComponent/>
       </div> 
       </ScrollableAnchor>

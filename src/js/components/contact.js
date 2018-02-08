@@ -36,7 +36,7 @@ class Contact extends Component{
 			<div className = "contactBarWrapper">
 				<div className = "contactBarWrapper__closeIcon" onClick = {this.props.onClick}></div>
 				<div className = "contactBarWrapper__contactInfo">
-						<div className = "contactHeader page-header">GET IN TOUCH</div>
+						<div className = "contactHeader page-header">Get in Touch</div>
 						{this.renderContactInfo()}
 				</div>
 			</div>

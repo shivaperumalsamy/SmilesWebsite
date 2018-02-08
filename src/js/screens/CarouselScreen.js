@@ -5,30 +5,42 @@ import { CSSTransitionGroup } from 'react-transition-group'
 import Slide from '../components/Slider.js';
 
 import data from '../../data/carouseldata.json';
-
+import Utility from '../common/utility';
 import  '../../css/carouselscreen.css';
 
 class Carousel extends Component{ 
     constructor(props) {
         super(props);
         this.state = {
-            items: ['hello', 'world', 'click', 'me'],
+            //items: ['hello', 'world', 'click', 'me'],
             active: this.props.active,
-            image:[] 
+            data:[   
+                {
+                "imageurl": "https://www.hdwallpapers.in/walls/big_hero_6_movie-wide.jpg",
+                "code": "0"
+             }]
+             
         }
         this.leftClick = this.moveLeft.bind(this)
         this.rightClick = this.moveRight.bind(this)
         this.moveToSlide = this.moveToSlide.bind(this)
+
       }
-    componentDidMount() {
+      updateContent = (response)=> {
+         this.setState({ data : response.data});
+         console.log(" Hello " + this.state.data);
+      }
+      componentDidMount() {
         this.timer = setInterval(this.rightClick, 5000);
         window.addEventListener('keydown', this.onKeydown);
-   }
-
-    componentWillUnmount() {
+      }
+      componentWillMount(){
+        Utility.hitTheService('https://sirius-smiles-cms.herokuapp.com/CarouselData',this.updateContent); 
+      }
+      componentWillUnmount() {
         clearInterval(this.timer);
         window.removeEventListener('keydown', this.onKeydown);
-    }
+     }
 
     //fucntion to handle < and > keys
     onKeydown = (e) => {
@@ -41,36 +53,16 @@ class Carousel extends Component{
             this.moveRight();
     }
     //Renders the main slide
-    renderSlide() {
-        //console.log("active state ",this.state.active)
-        //console.log("datum",data[this.state.active])
-        return <Slide key={this.state.active} imgData={data[this.state.active]} />
+    renderSlide(){
+        return <Slide key={this.state.active} imgData={this.state.data[this.state.active]} />
     }
-    //Function Name: componentWillMount()
-    //Description: Returns the Data retrieved from the node module.
-//     componentWillMount(){
-//         axios({
-//             method:'get',
-//             url:'https://sirius-smiles-cms.herokuapp.com/CarouselData',
-//             auth:{
-//                 user: 'siva',
-//                 password: 'P@ssw0rd'
-//             }
-//           }).then(function (response) {
-//     console.log("Response hey :" + response);
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
-
-//     }
     //Function to silde left
     moveLeft() {
         clearInterval(this.timer)
         let newActive = this.state.active
         newActive--
         this.setState({
-            active: newActive < 0 ? data.length - 1 : newActive
+            active: newActive < 0 ? this.state.data.length - 1 : newActive
         })
         this.timer = setInterval(this.rightClick, 5000);
     }
@@ -79,7 +71,7 @@ class Carousel extends Component{
         clearInterval(this.timer)
         let newActive = this.state.active
         this.setState({
-            active: (newActive + 1) % data.length
+            active: (newActive + 1) % this.state.data.length
         })
         this.timer = setInterval(this.rightClick, 5000);
     }
@@ -101,10 +93,10 @@ class Carousel extends Component{
         clearInterval(this.timer)
         let newActive = index
         this.setState({
-            active: (newActive + 1) % data.length
+            active: (newActive + 1) % this.state.data.length
         })
         this.removePreviousLegendClick();
-        for(let i=0;i<data.length;i++){
+        for(let i=0;i<this.state.data.length;i++){
             if(i === index){
                 var htmlCircleSpan=React.createElement('span',{className:"circle"},'');
                 ReactDOM.render(htmlCircleSpan,document.getElementById("legend_"+index));
@@ -115,7 +107,7 @@ class Carousel extends Component{
 
     
     renderLegendButtons = () =>{
-        let legendbtns = data.map((data,index)=>{
+        let legendbtns = this.state.data.map((data,index)=>{
           return  <li className="legend-button" id={'legend_'+index} key={index} data-carousel-active={index} onClick={this.moveToSlide.bind(this,index)}></li>
         })
         return legendbtns;
@@ -123,6 +115,8 @@ class Carousel extends Component{
     
     render() {
 
+        console.log("Inside render");
+        console.log(this.state);
         return(
             <div className="carouselViewpane">
                 <CSSTransitionGroup transitionName='slider'

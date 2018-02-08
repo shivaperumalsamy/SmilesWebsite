@@ -85,7 +85,7 @@
   right: 0px;
   background-color: black; }
   .contactBarWrapper .contactBarWrapper__closeIcon {
-    padding: 20px 0px 20px 35px;
+    padding: 16px 0px 20px 35px;
     font-size: 40px;
     font-family: 'Linearicons-Free';
     cursor: pointer; }
@@ -97,7 +97,7 @@
     .contactBarWrapper .contactBarWrapper__contactInfo .contactHeader {
       width: 85%;
       color: #d06182;
-      padding-bottom: 20px;
+      padding-bottom: 11px;
       border-bottom: 2px solid #d06182; }
     .contactBarWrapper .contactBarWrapper__contactInfo .contact {
       display: inline-block;

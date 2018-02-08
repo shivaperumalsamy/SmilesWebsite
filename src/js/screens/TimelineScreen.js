@@ -4,6 +4,8 @@ import TimelineComponent from '../components/TimelineComponent.js';
 import '../../css/timelinescreen.css';
 import data from '../../data/timelineScreenData.json';
 import timelineline from '../../assets/img/timelineline.svg';
+import Utility from '../common/utility.js';
+
 /*
     Class Name: TimelineScreen
     Return : @component
@@ -14,13 +16,25 @@ class TimelineScreen extends Component{
         this.onResize = this.onResize.bind(this);
         this.throttleResize = throttle(this.onResize,400);
         this.state = {
-            noOfElements : this.calculateNoOfElements(),
+            timelineData : [],
+            noOfElements : 0,
             flag : 1
+
         }
     }
+    updateContent = (response)=>{
+        this.setState({
+            timelineData : response.data,
+        });
+        if(this.state.timelineData.length <=4){
+            let scrollRightElement = document.getElementsByClassName('scrollContainer__scrollRight')[0];
+            scrollRightElement.style.display = 'none';
+        }
+    }
+
     componentDidUpdate(){
         console.log("component did update in timeline screen");
-        if(this.state.noOfElements * this.state.flag > data.length){
+        if(this.state.noOfElements * this.state.flag > this.state.timelineData.length){
             console.log("condition for hiding right");
             let scrollRightElement = document.getElementsByClassName('scrollContainer__scrollRight')[0];
             let scrollLeftElement = document.getElementsByClassName('scrollContainer__scrollLeft')[0];
@@ -36,9 +50,11 @@ class TimelineScreen extends Component{
         }
     }
     componentDidMount() {
+        Utility.hitTheService('https://sirius-smiles-cms.herokuapp.com/Timeline',this.updateContent)       
         window.addEventListener('resize', this.throttleResize);
         this.componentDidUpdate();
    }
+   
     componentWillUnmount() {
         console.log("component unmounting");
         window.removeEventListener('resize', this.throttleResize);
@@ -52,8 +68,8 @@ class TimelineScreen extends Component{
     calculateNoOfElements() {
         let width = window.innerWidth;
         console.log("width = "+ width);
-        console.log("data length = "+ data.length);
-        switch (data.length){
+        console.log("data length = "+ this.state.timelineData.length);
+        switch (this.state.timelineData.length){
             case 0 : return 0;
             case 1 : return 1;
             case 2 : {
@@ -86,12 +102,12 @@ class TimelineScreen extends Component{
     renderTimelineComponents(){
         let elements = [];
         let noOfElements = this.state.noOfElements * this.state.flag;
-        if(noOfElements > data.length)
-        noOfElements = data.length;
+        if(noOfElements > this.state.timelineData.length)
+        noOfElements = this.state.timelineData.length;
         
         console.log("loop limits = ",((this.state.flag -1) * this.state.noOfElements),noOfElements)
         for (let i= ((this.state.flag -1) * this.state.noOfElements); i < noOfElements; i++) {
-            elements.push(<TimelineComponent key={i} timelineData = {data[i]}/>);
+            elements.push(<TimelineComponent key={i} timelineData = {this.state.timelineData[i]}/>);
         }
         console.log("render timeline components called = "+ elements);
         return elements   
@@ -103,7 +119,18 @@ class TimelineScreen extends Component{
         });
         console.log("inside handle click = "+this.state.flag);
     }
+
+    // componentDidMount(){
+    //     let scrollRightElement = document.getElementsByClassName('scrollContainer__scrollRight')[0];
+    //     console.log(scrollRightElement);
+    // }
+
     render(){
+        this.state.noOfElements = this.calculateNoOfElements();
+        let displayBlock = 'Block';
+        if(this.state.timelineData.length <= 4 ){
+            displayBlock = 'none'; 
+        }
         return(
             <div className = "wrapper-timelinewrapper">
                 <div className = "timeline-header">

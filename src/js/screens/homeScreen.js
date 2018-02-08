@@ -84,7 +84,7 @@ class HomeScreen extends Component {
        <MenuBar onClick = {this.handleClick} setBorder={this.setBorder} index = "1"></MenuBar>
        <Contact onClick = {this.handleClick} index = "1"></Contact>
        <ScrollableAnchor id={commonObj.sectionIds[0]}>
-          <Carousel active="1" className="height-100vh">
+          <Carousel active="0" className="height-100vh">
           </Carousel>
        </ScrollableAnchor>
        <ScrollableAnchor id={commonObj.sectionIds[1]}>

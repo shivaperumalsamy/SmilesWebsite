@@ -34,7 +34,7 @@ class TimelineScreen extends Component{
 
     componentDidUpdate(){
         console.log("component did update in timeline screen");
-        if(this.state.noOfElements * this.state.flag > this.state.timelineData.length){
+        if(this.state.noOfElements * this.state.flag >= this.state.timelineData.length){
             console.log("condition for hiding right");
             let scrollRightElement = document.getElementsByClassName('scrollContainer__scrollRight')[0];
             let scrollLeftElement = document.getElementsByClassName('scrollContainer__scrollLeft')[0];
@@ -127,10 +127,7 @@ class TimelineScreen extends Component{
 
     render(){
         this.state.noOfElements = this.calculateNoOfElements();
-        let displayBlock = 'Block';
-        if(this.state.timelineData.length <= 4 ){
-            displayBlock = 'none'; 
-        }
+        console.log("Resizing " + this.state.noOfElements)
         return(
             <div className = "wrapper-timelinewrapper">
                 <div className = "timeline-header">

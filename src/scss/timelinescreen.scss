@@ -5,13 +5,13 @@
 .wrapper-timelinewrapper{
     @include boxSize(100%,100%);
     .timeline-header{
-        @include boxSize(85%,$timeline-header-height); 
-        @include margin('','','',8%);
         position: relative;
-        border-bottom: 2px solid unquote("#"+nth($menuColors , 3 ));
+        //border-bottom: 2px solid unquote("#"+nth($menuColors , 3 ));
         .timeline-heading{
-            position: absolute;
-            top: 50%;
+            //position: absolute;
+            //top: 50%;
+            @extend .header;
+            border-bottom: 2px solid unquote("#"+nth($menuColors , 3 ));
             color: unquote("#"+nth($menuColors , 3 ));
         }
     } 

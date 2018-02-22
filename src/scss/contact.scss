@@ -16,7 +16,7 @@
 	background-color : $theme-dark;
 
 	.contactBarWrapper__closeIcon{
-			padding: 16px 0px 10px 35px;
+			padding: 16px 0px 10px 25px;
     		font-size: 40px;
 			font-family: 'Linearicons-Free';
 			cursor: pointer;
@@ -26,29 +26,26 @@
 	   		} 
 	}
 	.contactBarWrapper__contactInfo{
-	          margin-left: 95px;
+	          @include margin('','','',90px);
 	      
 			.contactHeader{
 				width: 85%;
 				color: $contactPageThemeColor;
-				margin: 0 0 20px 0px;
-				padding-top: 7%;
-				padding-bottom: 20px; 
-				//padding-left: 95px;
-				font-size: $fontsize-M;
+				@extend .header;
+				@include margin('','','',0px);
 				border-bottom: 2px solid $contactPageThemeColor;
 			}
 			
 			.contact{
 				display: inline-block;
 				color: #00B2EE;
-				margin-top : 40px;
+				@include margin(40px);
 				&.content{
-					padding-left: 40px;
+					@include padding('','','',40px);
 				}
 			}
 			.icon{
-				font-size: 30px;
+				font-size: $fontsize-M;
 			}
 			
 	 } 

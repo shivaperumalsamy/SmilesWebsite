@@ -72,20 +72,38 @@
   width: 100%;
   height: 100%; }
 
+.header, .wrapper_AboutHeaderandContent .contentHeader p {
+  margin: 0 0 20px 8%;
+  padding-top: 7%;
+  padding-bottom: 20px;
+  font-size: 30px; }
+
+/* Default properties */
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif; }
+
+.page-header {
+  font-size: 30px;
+  font-family: "Pacifico", cursive; }
+
+.page-content {
+  font-size: 17px;
+  font-family: "Josefin Sans", sans-serif; }
+
 /* Start about wrapper styles */
 .wrapper_AboutHeaderandContent {
   position: relative;
   width: 100%;
   height: 100%; }
   .wrapper_AboutHeaderandContent .contentHeader {
-    position: absolute;
     width: 92%;
-    height: 20%;
-    left: 8%;
-    border-bottom: 2px solid #d5ad3f; }
+    height: 20%; }
     .wrapper_AboutHeaderandContent .contentHeader p {
-      position: absolute;
-      top: 50%;
+      border-bottom: 2px solid #d5ad3f;
       color: #d5ad3f; }
 
 .wrapper_aboutwrapper {
@@ -102,30 +120,30 @@
     float: left;
     width: 55%;
     height: 100%;
-    padding-top: 3%;
+    padding-top: "";
     padding-right: 5%;
     padding-left: 3%;
     padding-bottom: "";
-    margin-top: -2%;
-    margin-right: "";
-    margin-left: "";
-    margin-bottom: ""; }
+    text-align: justify; }
     .wrapper_aboutwrapper .about_area .content {
       overflow: auto;
       line-height: 24px;
       width: 100%;
       height: 100%;
-      padding-top: 8%;
-      color: #f0f0f0; }
+      color: #f0f0f0;
+      padding: 15px; }
+      .wrapper_aboutwrapper .about_area .content::first-letter {
+        font-size: 32px;
+        font-family: "Pacifico", cursive; }
   .wrapper_aboutwrapper .about_photo {
     float: left;
     width: 35%;
     height: 100%;
-    padding-top: "";
-    padding-right: "";
-    padding-left: 5%;
-    padding-bottom: ""; }
-    .wrapper_aboutwrapper .about_photo img {
+    margin-top: "";
+    margin-right: "";
+    margin-left: 5%;
+    margin-bottom: ""; }
+    .wrapper_aboutwrapper .about_photo div {
       width: 100%;
       height: 100%;
       border-radius: 2%;

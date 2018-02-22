@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import throttle from 'lodash.throttle';
 import TimelineComponent from '../components/TimelineComponent.js';
 import '../../css/timelinescreen.css';
-import data from '../../data/timelineScreenData.json';
 import timelineline from '../../assets/img/timelineline.svg';
 import Utility from '../common/utility.js';
 

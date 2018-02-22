@@ -61,7 +61,7 @@ var commonObj = {
        {
          icon : 'fa fa-phone',
          name : 'phone',
-         content : 'call us',
+         content : '044-6650-7800',
          refUrl : "javascript:void(0)",
          target : '_self'
          

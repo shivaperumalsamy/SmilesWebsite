@@ -1,5 +1,6 @@
 @import '_variable';
 @import '_mixin';
+@import '_commons';
 
 /*--- START : Home Wrapper Styles ---*/
 
@@ -15,7 +16,7 @@
 	background-color : $theme-dark;
 
 	.contactBarWrapper__closeIcon{
-			padding: 16px 0px 20px 35px;
+			padding: 16px 0px 10px 35px;
     		font-size: 40px;
 			font-family: 'Linearicons-Free';
 			cursor: pointer;
@@ -30,7 +31,11 @@
 			.contactHeader{
 				width: 85%;
 				color: $contactPageThemeColor;
-				padding-bottom: 11px;
+				margin: 0 0 20px 0px;
+				padding-top: 7%;
+				padding-bottom: 20px; 
+				//padding-left: 95px;
+				font-size: $fontsize-M;
 				border-bottom: 2px solid $contactPageThemeColor;
 			}
 			
@@ -45,6 +50,7 @@
 			.icon{
 				font-size: 30px;
 			}
+			
 	 } 
 	
 }

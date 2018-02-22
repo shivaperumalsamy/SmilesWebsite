@@ -6,7 +6,6 @@ var Utility = function(){
         var hitTheService = function(url,updateContent){
             
                 axios.get(url,{
-                    withCredentials: false,
                     auth: {
                     username: 'siva',
                     password: 'P@ssw0rd'

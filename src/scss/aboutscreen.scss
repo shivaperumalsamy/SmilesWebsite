@@ -1,6 +1,6 @@
 @import '_variable';
 @import '_mixin';
-
+@import '_commons';
 /* Start about wrapper styles */
 
 .wrapper_AboutHeaderandContent{
@@ -9,13 +9,10 @@
     @include boxSize(100%,100%); 
 
     .contentHeader{         
-        position: absolute;
-        @include boxSize(92%,20%); 
-        left:8%;
-        border-bottom: 2px solid unquote("#"+nth($menuColors , 2 ));
+        @include boxSize(92%,20%);      
         p{
-            position: absolute;
-            top: 50%;
+            @extend .header;
+            border-bottom: 2px solid unquote("#"+nth($menuColors , 2 ));
             color: unquote("#"+nth($menuColors , 2 ));
         }
     }
@@ -33,23 +30,29 @@
     .about_area{
         float: left;
         @include boxSize(55%,100%); 
-        @include padding(3%, 5%, '', 3%);
-        @include margin(-2%,'','','');
+        @include padding('', 5%, '', 3%);
+        text-align: justify;
+       // @include margin(-2%,'','','');
 
         .content{
             overflow: auto;
             line-height: 24px;
             @include boxSize(100%,100%); 
-            @include padding(8%);
             color: rgb(240, 240, 240);
+            padding: 15px;
+            &::first-letter{
+              font-size: 32px;  
+              font-family: $pacifico-font;
+            }
         }
     }
     .about_photo{
         float: left;
         @include boxSize(35%,100%); 
-        @include padding('', '', '', 5%);
+        @include margin('','','',5%);
+       // @include padding('', '', '', 5%);
 
-        img{
+        div{
             @include boxSize(100%,100%); 
             border-radius: 2%;
             box-shadow: 0 0 15px 5px $about-shadow ;

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import '../../css/aboutscreen.css';
-import data from '../../data/aboutScreenData.json';
 import Utility from '../common/utility';
-import aboutImage from '../../assets/img/aboutImage.jpg';
+
 
 /*
     Class Name: AboutScreen
@@ -14,33 +13,43 @@ class AboutScreen extends Component{
     constructor(){
         super();
         this.state = {
-            timelineData : []
+            aboutData : []
         };
     }
     updateContent = (response) =>{
         console.log(response);
         this.setState({
-            timelineData : response.data
+            aboutData : response.data
         });
-        console.log(this.state.timelineData);
+        console.log(this.state.aboutData);
     }
 
     componentDidMount(){
         Utility.hitTheService('https://sirius-smiles-cms.herokuapp.com/AboutScreen',this.updateContent);
     }
     render() {
+        var style = {
+            backgroundImage: 'url(' + this.state.aboutData.aboutImage + ')',
+            // backgroundSize: 'cover',
+            // backgroundRepeat : 'no-repeat',
+            backgroundPositionX: 'center',
+            backgroundPositionY: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain'       
+        }
         return ( 
             <div className="wrapper_AboutHeaderandContent">
-            <div className = "contentHeader page-header"> <p className = "page-header">What we do?</p></div>
+            <div className = "contentHeader page-header"> 
+            <p className = "page-header">What we do?</p></div>
             <div className = "wrapper_aboutwrapper">
                 <div className = "about_area">
                     
                     <div className = "content page-content">
-                        {this.state.timelineData.aboutContent}
+                        {this.state.aboutData.aboutContent}
                     </div>
                 </div>
                 <div className = "about_photo">
-                    <img src={this.state.timelineData.aboutImage} alt="about"/>
+                    <div  style = {style}></div>
                 </div>
             </div>
             </div>

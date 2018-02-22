@@ -4,7 +4,6 @@ import { CSSTransitionGroup } from 'react-transition-group'
 
 import Slide from '../components/Slider.js';
 
-import data from '../../data/carouseldata.json';
 import Utility from '../common/utility';
 import  '../../css/carouselscreen.css';
 

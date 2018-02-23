@@ -105,7 +105,7 @@ html, body {
     margin-right: "";
     margin-left: auto;
     margin-bottom: "";
-    background: linear-gradient(transparent, transparent);
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
     color: #ffffff;
     font-size: 30px; }
     .menuBar .menuBar__menuIcon span {
@@ -113,8 +113,7 @@ html, body {
       text-decoration: none;
       font-family: 'Linearicons-Free';
       line-height: 100px;
-      margin-left: 30%;
-      cursor: pointer; }
+      margin-left: 30%; }
   .menuBar .logo .logoIcon {
     width: 100%;
     position: absolute;

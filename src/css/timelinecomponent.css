@@ -72,11 +72,17 @@
   width: 100%;
   height: 100%; }
 
+.header {
+  margin: 0 0 20px 8%;
+  padding-top: 7%;
+  padding-bottom: 20px;
+  font-size: 30px; }
+
 /* Start  timeline component styles */
 .timeline-component {
   float: left;
   width: 250px;
-  height: 350px;
+  height: 250px;
   margin-top: "";
   margin-right: 2%;
   margin-left: "";
@@ -102,7 +108,6 @@
     -moz-border-radius: 75px;
     border-radius: 75px;
     color: #f0f0f0;
-    margin: auto;
     padding-top: 40px;
     text-align: center;
     position: absolute;
@@ -114,7 +119,8 @@
   .timeline-component .timeline-content {
     overflow: auto;
     position: absolute;
-    bottom: 25px;
+    top: 75px;
+    text-align: justify;
     padding-left: 25px;
     padding-right: 25px;
     width: 100%;

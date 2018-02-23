@@ -1,7 +1,7 @@
 @import '_variable';
 @import '_mixin';
 
-$timeline-component-box-height : 350px;
+$timeline-component-box-height : 250px;
 $timeline-component-box-width : 250px;
 
 /* Start  timeline component styles */
@@ -30,7 +30,7 @@ $timeline-component-box-width : 250px;
         @include boxSize(150px,150px); 
         @include border-radius(75px);
         color: rgb(240, 240, 240);
-        margin: auto;
+       // margin: auto;
         padding-top: 40px;
         text-align: center;
         position: absolute;
@@ -44,7 +44,8 @@ $timeline-component-box-width : 250px;
     .timeline-content{
         overflow: auto;
         position: absolute;
-        bottom: 25px;
+        top: 75px;
+        text-align: justify;
         padding-left: 25px;
         padding-right: 25px;
         @include boxSize(100%,240px); 

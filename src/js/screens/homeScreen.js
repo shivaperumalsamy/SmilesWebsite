@@ -112,13 +112,15 @@ setBorderOnScroll(){
 }
 
   render() {
+
     const { loading } = this.state;
     
-    if(loading) { 
-      return <div className = "bounce-loader">
-                <ClipLoader size={100} color={'#296AAC'} loading={true} />
-             </div> 
-    }
+        if(loading) { 
+        return <div className = "bounce-loader">
+                    <ClipLoader size={100} color={'#296AAC'} loading={true} />
+                </div> 
+        } 
+   
     return (  
     <div>	
        <MenuBar onClick = {this.handleClick} setBorder={this.setBorder} index = "1"></MenuBar>

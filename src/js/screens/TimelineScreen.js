@@ -5,6 +5,7 @@ import '../../css/timelinescreen.css';
 import timelineline from '../../assets/img/timelineline.svg';
 import Utility from '../common/utility.js';
 
+
 /*
     Class Name: TimelineScreen
     Return : @component
@@ -49,9 +50,11 @@ class TimelineScreen extends Component{
         }
     }
     componentDidMount() {
-        Utility.hitTheService('https://sirius-smiles-cms.herokuapp.com/Timeline',this.updateContent)       
         window.addEventListener('resize', this.throttleResize);
         this.componentDidUpdate();
+   }
+   componentWillMount(){
+        Utility.hitTheService('https://sirius-smiles-cms.herokuapp.com/Timeline',this.updateContent);       
    }
    
     componentWillUnmount() {
@@ -125,6 +128,7 @@ class TimelineScreen extends Component{
     // }
 
     render(){
+        
         this.state.noOfElements = this.calculateNoOfElements();
         console.log("Resizing " + this.state.noOfElements)
         return(

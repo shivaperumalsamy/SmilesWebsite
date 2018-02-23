@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { CSSTransitionGroup } from 'react-transition-group'
 
 import Slide from '../components/Slider.js';
-
 import Utility from '../common/utility';
 import  '../../css/carouselscreen.css';
 
@@ -30,12 +29,13 @@ class Carousel extends Component{
          console.log(" Hello " + this.state.data);
       }
       componentDidMount() {
+        
         this.timer = setInterval(this.rightClick, 5000);
         window.addEventListener('keydown', this.onKeydown);
-      }
-      componentWillMount(){
         Utility.hitTheService('https://sirius-smiles-cms.herokuapp.com/CarouselData',this.updateContent); 
+
       }
+      
       componentWillUnmount() {
         clearInterval(this.timer);
         window.removeEventListener('keydown', this.onKeydown);
@@ -114,8 +114,8 @@ class Carousel extends Component{
     
     render() {
 
-        console.log("Inside render");
-        console.log(this.state);
+
+       
         return(
             <div className="carouselViewpane">
                 <CSSTransitionGroup transitionName='slider'

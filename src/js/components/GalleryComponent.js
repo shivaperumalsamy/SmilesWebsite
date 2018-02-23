@@ -29,7 +29,7 @@ class GalleryComponent extends Component{
   } 
 
   //Hit the service for content
-  componentDidMount(){
+  componentWillMount(){
     Utility.hitTheService('https://sirius-smiles-cms.herokuapp.com/Gallery', this.updateContent)
   }
   /**
@@ -38,6 +38,7 @@ class GalleryComponent extends Component{
    */
         
   renderGalleryObjects = () => {
+   
     let galleryItems = this.state.galleryData.map((menu, index)=>{
       var style = {
         backgroundImage: 'url(' + menu.img + ')',

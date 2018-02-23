@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../../css/aboutscreen.css';
 import Utility from '../common/utility';
+import { ClipLoader } from 'react-spinners';
+
 
 
 /*
@@ -25,6 +27,7 @@ class AboutScreen extends Component{
     }
 
     componentDidMount(){
+         
         Utility.hitTheService('https://sirius-smiles-cms.herokuapp.com/AboutScreen',this.updateContent);
     }
     render() {
@@ -35,7 +38,7 @@ class AboutScreen extends Component{
             backgroundPositionX: 'center',
             backgroundPositionY: 'center',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: 'contain'       
+            backgroundSize: 'cover'       
         }
         return ( 
             <div className="wrapper_AboutHeaderandContent">

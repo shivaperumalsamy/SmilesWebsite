@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MenuIcon from './menuItem';
 import commonObj from '../common/data.js';
+import Smiles from '../../assets/img/SmileS.png'
 
 {
   /*
@@ -33,6 +34,9 @@ class MenuBar extends Component{
 			<div id = "menu-hover-effect"></div>
 			<div className = "menuBar">
 				{this.renderMenu()}
+				<div className = "logo">
+					<img className = "logoIcon" src = {Smiles}  alt = "Smiles Logo"/>
+				</div>
 			</div>
 			</div>
 		);

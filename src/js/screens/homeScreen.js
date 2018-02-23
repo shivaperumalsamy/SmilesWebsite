@@ -11,7 +11,7 @@ import Contact from '../components/contact';
 import '../../css/contact.css';
 import Footer from '../components/footer';
 import ContactAnimationObject from '../common/contactpage.js';
-import { BounceLoader } from 'react-spinners';
+import { ClipLoader } from 'react-spinners';
 
 
 /*
@@ -116,7 +116,7 @@ setBorderOnScroll(){
     
     if(loading) { 
       return <div className = "bounce-loader">
-                <BounceLoader size={100} color={'#FFC0CB'} loading={true} />
+                <ClipLoader size={100} color={'#296AAC'} loading={true} />
              </div> 
     }
     return (  

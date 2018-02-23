@@ -115,6 +115,11 @@ html, body {
       line-height: 100px;
       margin-left: 30%;
       cursor: pointer; }
+  .menuBar .logo .logoIcon {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    padding: 5px; }
 
 .menuBar .menuBar__menuIcon:nth-of-type(1) span::after {
   content: "";

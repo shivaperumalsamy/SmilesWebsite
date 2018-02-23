@@ -4,7 +4,8 @@
 /*--- START : Document Styles ---*/
 html, body {
   @extend.boxSizeProperties;
-  background-color: #333333;
+ // background-color: #333333;
+ background-color: #000;
 }
 /*--- END : Document Styles ---*/
 
@@ -12,7 +13,7 @@ html, body {
 /*--- START : Wrapper Styles ---*/
  .height-100vh{
   //@extend.boxSizeProperties;
-  background-image : linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.2)), url('../assets/img/bg_pattern/2.png');
+  //background-image : linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.2)), url('../assets/img/bg_pattern/2.png');
   background-size : cover;
   background-attachment : fixed;
 

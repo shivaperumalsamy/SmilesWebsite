@@ -39,8 +39,9 @@
             line-height: 24px;
             @include boxSize(100%,100%); 
             color: rgb(240, 240, 240);
-            padding: 15px;
-            &::first-letter{
+            @include padding(15px, 15px, 15px, 15px);
+
+          &::first-letter{
               font-size: 32px;  
               font-family: $pacifico-font;
             }
@@ -50,7 +51,7 @@
         float: left;
         @include boxSize(35%,100%); 
         @include margin('','','',5%);
-       // @include padding('', '', '', 5%);
+        @include padding(15px, 15px, 15px, 15px);
 
         div{
             @include boxSize(100%,100%); 
